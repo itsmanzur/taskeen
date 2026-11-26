@@ -1,5 +1,5 @@
 use aes_gcm::{
-    aead::{Aead, KeyInit},
+    aead::{Aead, KeyInit, Payload},
     Aes256Gcm, Nonce,
 };
 use argon2::{
@@ -12,7 +12,7 @@ use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::fs;
 use std::path::Path;
-use std::sync::Mutex;
+use std::sync::{Mutex, OnceLock};
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub struct TaskeenItem {
@@ -62,6 +62,181 @@ pub struct DbState {
     pub db_verified: bool,
 }
 
+/// Formats a Unix timestamp (seconds) as RFC 3339 UTC, e.g. 2026-11-26T08:43:00Z.
+pub fn rfc3339_utc(secs: i64) -> String {
+    let days = secs.div_euclid(86_400);
+    let rem = secs.rem_euclid(86_400);
+    // Howard Hinnant's civil-from-days algorithm
+    let z = days + 719_468;
+    let era = z.div_euclid(146_097);
+    let doe = z.rem_euclid(146_097);
+    let yoe = (doe - doe / 1_460 + doe / 36_524 - doe / 146_096) / 365;
+    let doy = doe - (365 * yoe + yoe / 4 - yoe / 100);
+    let mp = (5 * doy + 2) / 153;
+    let d = doy - (153 * mp + 2) / 5 + 1;
+    let m = if mp < 10 { mp + 3 } else { mp - 9 };
+    let y = yoe + era * 400 + if m <= 2 { 1 } else { 0 };
+    format!(
+        "{:04}-{:02}-{:02}T{:02}:{:02}:{:02}Z",
+        y,
+        m,
+        d,
+        rem / 3_600,
+        (rem % 3_600) / 60,
+        rem % 60
+    )
+}
+
+pub fn rfc3339_now() -> String {
+    let secs = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs() as i64)
+        .unwrap_or(0);
+    rfc3339_utc(secs)
+}
+
+/// Empty in-memory stand-in used when the bundled content DB cannot be opened,
+/// so the UI can fall back to its bundled JSON instead of the app crashing.
+pub fn open_empty_content_db() -> Connection {
+    let conn = Connection::open_in_memory().expect("in-memory SQLite unavailable");
+    let _ = conn.execute_batch(
+        "CREATE TABLE items (
+            id TEXT PRIMARY KEY, category TEXT NOT NULL, title_bn TEXT NOT NULL,
+            emotion_tag TEXT NOT NULL, arabic_uthmani TEXT NOT NULL, bangla_pronunciation TEXT,
+            bangla_meaning TEXT NOT NULL, fazilat_text TEXT NOT NULL, story_title TEXT,
+            story_context TEXT, primary_source TEXT NOT NULL, hadith_grade TEXT NOT NULL,
+            recommended_count INTEGER NOT NULL, alim_note TEXT
+        );
+        CREATE VIRTUAL TABLE items_fts USING fts5(
+            id UNINDEXED, title_bn, bangla_meaning, fazilat_text, story_context
+        );",
+    );
+    conn
+}
+
+// ---------------------------------------------------------------------------
+// Field-level encryption at rest (AES-256-GCM, key supplied from the OS keychain)
+// ---------------------------------------------------------------------------
+
+static DATA_KEY: OnceLock<[u8; 32]> = OnceLock::new();
+const ENC_PREFIX: &str = "enc1:";
+
+pub fn init_data_key(key: [u8; 32]) {
+    let _ = DATA_KEY.set(key);
+}
+
+pub fn encryption_active() -> bool {
+    DATA_KEY.get().is_some()
+}
+
+fn seal_field(plain: &str, aad: &str) -> Result<String, String> {
+    let Some(key) = DATA_KEY.get() else {
+        return Ok(plain.to_string());
+    };
+    if plain.is_empty() {
+        return Ok(String::new());
+    }
+    let cipher = Aes256Gcm::new_from_slice(key).map_err(|e| e.to_string())?;
+    let mut nonce_bytes = [0u8; 12];
+    OsRng.fill_bytes(&mut nonce_bytes);
+    let ct = cipher
+        .encrypt(
+            Nonce::from_slice(&nonce_bytes),
+            Payload { msg: plain.as_bytes(), aad: aad.as_bytes() },
+        )
+        .map_err(|_| "এনক্রিপ্ট করতে সমস্যা হয়েছে".to_string())?;
+    let mut blob = Vec::with_capacity(12 + ct.len());
+    blob.extend_from_slice(&nonce_bytes);
+    blob.extend_from_slice(&ct);
+    Ok(format!("{}{}", ENC_PREFIX, hex::encode(blob)))
+}
+
+fn open_field(stored: &str, aad: &str) -> Result<String, String> {
+    let Some(rest) = stored.strip_prefix(ENC_PREFIX) else {
+        return Ok(stored.to_string()); // legacy plaintext row
+    };
+    let key = DATA_KEY.get().ok_or_else(|| "ডেটা key পাওয়া যায়নি".to_string())?;
+    let blob = hex::decode(rest).map_err(|_| "ক্ষতিগ্রস্ত এনক্রিপ্টেড ডেটা".to_string())?;
+    if blob.len() < 12 + 16 {
+        return Err("ক্ষতিগ্রস্ত এনক্রিপ্টেড ডেটা".to_string());
+    }
+    let (nonce_bytes, ct) = blob.split_at(12);
+    let cipher = Aes256Gcm::new_from_slice(key).map_err(|e| e.to_string())?;
+    let plain = cipher
+        .decrypt(Nonce::from_slice(nonce_bytes), Payload { msg: ct, aad: aad.as_bytes() })
+        .map_err(|_| "ডিক্রিপ্ট ব্যর্থ".to_string())?;
+    String::from_utf8(plain).map_err(|_| "ক্ষতিগ্রস্ত ডেটা".to_string())
+}
+
+/// True when the user DB file already contains rows sealed with a data key.
+pub fn file_has_encrypted_rows(path: &Path) -> bool {
+    if !path.exists() {
+        return false;
+    }
+    let Ok(conn) = Connection::open_with_flags(path, rusqlite::OpenFlags::SQLITE_OPEN_READ_ONLY) else {
+        return false;
+    };
+    let kv: i64 = conn
+        .query_row("SELECT COUNT(*) FROM user_kv WHERE value LIKE 'enc1:%'", [], |r| r.get(0))
+        .unwrap_or(0);
+    let logs: i64 = conn
+        .query_row("SELECT COUNT(*) FROM user_logs WHERE tadabbur_note LIKE 'enc1:%'", [], |r| r.get(0))
+        .unwrap_or(0);
+    kv + logs > 0
+}
+
+/// Seals every legacy plaintext row in place, then scrubs freed pages.
+pub fn migrate_plaintext_to_encrypted(conn: &Connection) -> Result<usize, String> {
+    if !encryption_active() {
+        return Ok(0);
+    }
+    let mut migrated = 0usize;
+
+    let kv_rows: Vec<(String, String)> = {
+        let mut stmt = conn
+            .prepare("SELECT key, value FROM user_kv WHERE value NOT LIKE 'enc1:%'")
+            .map_err(|e| e.to_string())?;
+        let rows = stmt
+            .query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?)))
+            .map_err(|e| e.to_string())?;
+        rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())?
+    };
+    for (k, v) in kv_rows {
+        let sealed = seal_field(&v, &format!("kv:{}", k))?;
+        conn.execute("UPDATE user_kv SET value = ?1 WHERE key = ?2", params![sealed, k])
+            .map_err(|e| e.to_string())?;
+        migrated += 1;
+    }
+
+    let log_rows: Vec<(String, String)> = {
+        let mut stmt = conn
+            .prepare("SELECT item_id, tadabbur_note FROM user_logs WHERE tadabbur_note != '' AND tadabbur_note NOT LIKE 'enc1:%'")
+            .map_err(|e| e.to_string())?;
+        let rows = stmt
+            .query_map([], |r| Ok((r.get::<_, String>(0)?, r.get::<_, String>(1)?)))
+            .map_err(|e| e.to_string())?;
+        rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())?
+    };
+    for (id, note) in log_rows {
+        let sealed = seal_field(&note, &format!("log:{}", id))?;
+        conn.execute("UPDATE user_logs SET tadabbur_note = ?1 WHERE item_id = ?2", params![sealed, id])
+            .map_err(|e| e.to_string())?;
+        migrated += 1;
+    }
+
+    if migrated > 0 {
+        // Drop plaintext remnants from the WAL and free pages.
+        let _ = conn.execute_batch("PRAGMA wal_checkpoint(TRUNCATE); VACUUM;");
+    }
+    Ok(migrated)
+}
+
+pub fn delete_kv(conn: &Connection, key: &str) -> Result<(), String> {
+    conn.execute("DELETE FROM user_kv WHERE key = ?1", params![key])
+        .map_err(|e| e.to_string())?;
+    Ok(())
+}
+
 pub fn compute_sha256(path: &Path) -> Result<String, String> {
     let bytes = fs::read(path).map_err(|e| e.to_string())?;
     let mut hasher = Sha256::new();
@@ -73,6 +248,7 @@ pub fn init_user_tables(conn: &Connection) -> Result<()> {
     conn.execute_batch(
         "PRAGMA journal_mode=WAL;
          PRAGMA synchronous=NORMAL;
+         PRAGMA secure_delete=ON;
          CREATE TABLE IF NOT EXISTS user_logs (
             item_id TEXT PRIMARY KEY,
             tasbih_count INTEGER NOT NULL DEFAULT 0,
@@ -215,11 +391,17 @@ pub fn get_user_logs(conn: &Connection) -> Result<Vec<UserLogRow>, String> {
     let rows = stmt
         .query_map([], |row| {
             let fav: i64 = row.get(2)?;
+            let item_id: String = row.get(0)?;
+            let stored_note: String = row.get(3)?;
+            let note = open_field(&stored_note, &format!("log:{}", item_id)).unwrap_or_else(|e| {
+                eprintln!("note for {} unreadable: {}", item_id, e);
+                String::new()
+            });
             Ok(UserLogRow {
-                item_id: row.get(0)?,
+                item_id,
                 tasbih_count: row.get(1)?,
                 is_favorite: fav != 0,
-                tadabbur_note: row.get(3)?,
+                tadabbur_note: note,
             })
         })
         .map_err(|e| e.to_string())?;
@@ -234,6 +416,7 @@ pub fn save_user_log(
     is_favorite: bool,
     tadabbur_note: &str,
 ) -> Result<(), String> {
+    let sealed_note = seal_field(tadabbur_note, &format!("log:{}", item_id))?;
     conn.execute(
         "INSERT INTO user_logs (item_id, tasbih_count, is_favorite, tadabbur_note, updated_at)
          VALUES (?1, ?2, ?3, ?4, datetime('now'))
@@ -242,7 +425,7 @@ pub fn save_user_log(
            is_favorite = excluded.is_favorite,
            tadabbur_note = excluded.tadabbur_note,
            updated_at = excluded.updated_at",
-        params![item_id, tasbih_count, if is_favorite { 1 } else { 0 }, tadabbur_note],
+        params![item_id, tasbih_count, if is_favorite { 1 } else { 0 }, sealed_note],
     )
     .map_err(|e| e.to_string())?;
     Ok(())
@@ -253,17 +436,21 @@ pub fn get_all_kv(conn: &Connection) -> Result<Vec<UserKvRow>, String> {
         .prepare("SELECT key, value FROM user_kv")
         .map_err(|e| e.to_string())?;
     let rows = stmt
-        .query_map([], |row| {
-            Ok(UserKvRow {
-                key: row.get(0)?,
-                value: row.get(1)?,
-            })
-        })
+        .query_map([], |row| Ok((row.get::<_, String>(0)?, row.get::<_, String>(1)?)))
         .map_err(|e| e.to_string())?;
-    rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())
+    let raw = rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())?;
+    let mut out = Vec::with_capacity(raw.len());
+    for (key, stored) in raw {
+        match open_field(&stored, &format!("kv:{}", key)) {
+            Ok(value) => out.push(UserKvRow { key, value }),
+            Err(e) => eprintln!("kv row {} skipped: {}", key, e),
+        }
+    }
+    Ok(out)
 }
 
 pub fn set_kv(conn: &Connection, key: &str, value: &str) -> Result<(), String> {
+    let value = &seal_field(value, &format!("kv:{}", key))?;
     conn.execute(
         "INSERT INTO user_kv (key, value, updated_at)
          VALUES (?1, ?2, datetime('now'))
@@ -457,6 +644,61 @@ mod tests {
     use super::*;
 
     #[test]
+    fn test_field_encryption_at_rest_and_migration() {
+        let conn = Connection::open_in_memory().unwrap();
+        init_user_tables(&conn).unwrap();
+
+        // Legacy plaintext rows written before a key exists.
+        conn.execute(
+            "INSERT INTO user_kv (key, value, updated_at) VALUES ('ls:taskeen_notes_v1', '[\"গোপন নোট\"]', 'x')",
+            [],
+        )
+        .unwrap();
+        conn.execute(
+            "INSERT INTO user_logs (item_id, tasbih_count, is_favorite, tadabbur_note, updated_at) VALUES ('dua_9', 5, 0, 'গোপন তাদাব্বুর', 'x')",
+            [],
+        )
+        .unwrap();
+
+        init_data_key([7u8; 32]);
+        assert!(encryption_active());
+        assert_eq!(migrate_plaintext_to_encrypted(&conn).unwrap(), 2);
+        assert_eq!(migrate_plaintext_to_encrypted(&conn).unwrap(), 0);
+
+        let raw_kv: String = conn
+            .query_row("SELECT value FROM user_kv WHERE key='ls:taskeen_notes_v1'", [], |r| r.get(0))
+            .unwrap();
+        let raw_note: String = conn
+            .query_row("SELECT tadabbur_note FROM user_logs WHERE item_id='dua_9'", [], |r| r.get(0))
+            .unwrap();
+        assert!(raw_kv.starts_with("enc1:") && !raw_kv.contains("গোপন"));
+        assert!(raw_note.starts_with("enc1:") && !raw_note.contains("গোপন"));
+
+        // Reads return plaintext; counts stay plain.
+        let kv = get_all_kv(&conn).unwrap();
+        assert_eq!(kv[0].value, "[\"গোপন নোট\"]");
+        let logs = get_user_logs(&conn).unwrap();
+        assert_eq!(logs[0].tadabbur_note, "গোপন তাদাব্বুর");
+        assert_eq!(logs[0].tasbih_count, 5);
+
+        // New writes are sealed, and rows are bound to their key via AAD.
+        set_kv(&conn, "a", "secret-a").unwrap();
+        let raw_a: String = conn.query_row("SELECT value FROM user_kv WHERE key='a'", [], |r| r.get(0)).unwrap();
+        assert!(raw_a.starts_with("enc1:"));
+        conn.execute("UPDATE user_kv SET value = ?1 WHERE key='ls:taskeen_notes_v1'", params![raw_a]).unwrap();
+        assert!(get_all_kv(&conn).unwrap().iter().all(|r| r.key != "ls:taskeen_notes_v1"));
+
+        // Tampering is detected.
+        let mut tampered = raw_a.clone();
+        tampered.pop();
+        tampered.push(if raw_a.ends_with('0') { '1' } else { '0' });
+        assert!(open_field(&tampered, "kv:a").is_err());
+
+        delete_kv(&conn, "a").unwrap();
+        assert!(get_all_kv(&conn).unwrap().iter().all(|r| r.key != "a"));
+    }
+
+    #[test]
     fn test_user_logs_kv_and_encrypted_backup_roundtrip() {
         let conn = Connection::open_in_memory().unwrap();
         init_user_tables(&conn).unwrap();
@@ -485,6 +727,10 @@ mod tests {
         let kv = get_all_kv(&conn2).unwrap();
         assert_eq!(kv.len(), 1);
         assert_eq!(kv[0].key, "amalify_state");
+
+        assert_eq!(rfc3339_utc(0), "1970-01-01T00:00:00Z");
+        assert_eq!(rfc3339_utc(1_795_682_291), "2026-11-26T08:38:11Z");
+        assert_eq!(rfc3339_utc(951_782_400), "2000-02-29T00:00:00Z");
 
         // PIN Argon2 hash/verify roundtrip
         let hashed = hash_pin("123456").unwrap();

@@ -3,13 +3,15 @@
   "private": true,
   "version": "0.4.2",
   "engines": {
-    "node": ">=22.5.0"
+    "node": ">=22.13.0"
   },
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "build:db": "node scripts/build_db.mjs",
+    "review:apply": "node scripts/apply_review.mjs",
+    "refs:check": "python scripts/check_references.py",
     "preview": "vite preview",
     "tauri": "tauri"
   },
@@ -17,6 +19,7 @@
     "@fontsource/anek-bangla": "^5.3.0",
     "@fontsource/hind-siliguri": "^5.3.0",
     "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/lateef": "^5.3.0",
     "@fontsource/noto-naskh-arabic": "^5.3.0",
     "@fontsource/noto-sans-bengali": "^5.3.0",
     "@fontsource/noto-serif-bengali": "^5.3.0",
