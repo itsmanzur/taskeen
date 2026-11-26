@@ -4,6 +4,7 @@ import { TaskeenItem } from '../types';
 import { TodoItem } from './TodoQiblaReportsView';
 import { SadaqahEntry } from './ToolsView';
 import { AsrMadhab, CalculationMethod, computeOfflinePrayerTimes, OfflinePrayerTimes } from '../lib/prayerTimes';
+import { getLocalDateKey } from '../lib/date';
 import { DashboardWidgetsPrefs, DEFAULT_DASHBOARD_WIDGETS } from './SettingsView';
 
 export type PrayerStatus = 'pending' | 'done' | 'qaza' | 'missed';
@@ -141,7 +142,7 @@ export default function DashboardView({
   onNavigate,
   widgets = DEFAULT_DASHBOARD_WIDGETS,
 }: DashboardViewProps) {
-  const todayKey = new Date().toISOString().split('T')[0];
+  const todayKey = getLocalDateKey();
   const todayPrayers: PrayerDay = prayers[todayKey] || {
     fajr: 'pending',
     dhuhr: 'pending',
@@ -172,7 +173,7 @@ export default function DashboardView({
     for (let i = 0; i < 365; i++) {
       const check = new Date(d);
       check.setDate(d.getDate() - i);
-      const key = check.toISOString().split('T')[0];
+      const key = getLocalDateKey(check);
       const day = prayers[key];
       const done = day
         ? PRAYER_LABELS.filter((p) => day[p.key] === 'done').length

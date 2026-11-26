@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { invoke } from '@tauri-apps/api/core';
 import { BookOpen, Check, Copy, ExternalLink, HeartHandshake, Info, MessageSquareHeart, ShieldCheck, Sparkles, User } from 'lucide-react';
 
 interface AboutViewProps {
@@ -19,6 +20,12 @@ export default function AboutView({ nativeDbHash, onOpenFeedbackModal }: AboutVi
     } catch {}
   };
 
+  const openExternal = (url: string) => {
+    invoke('open_external_url', { url }).catch(() => {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  };
+
   return (
     <div className="p-6 max-w-5xl mx-auto w-full space-y-6">
       {/* App Identity Hero Card */}
@@ -31,7 +38,7 @@ export default function AboutView({ nativeDbHash, onOpenFeedbackModal }: AboutVi
             <div className="flex items-center gap-2 flex-wrap">
               <h1 className="font-serif-bn text-2xl font-bold">তাসকীন (Taskeen)</h1>
               <span className="text-xs px-2.5 py-0.5 rounded-full bg-white/20 font-mono-code font-semibold">
-                v0.4.0
+                v0.4.2
               </span>
             </div>
             <p className="text-sm opacity-90">
@@ -74,7 +81,7 @@ export default function AboutView({ nativeDbHash, onOpenFeedbackModal }: AboutVi
             <ShieldCheck className="w-4 h-4 ts-accent-text" /> প্রাইভেসি ও নিরাপত্তা
           </div>
           <p className="text-xs ts-muted-text leading-relaxed">
-            কোনো ট্র্যাকিং বা বিজ্ঞাপন নেই। সব তথ্য আপনার ডিভাইসেই থাকে; সাথে রয়েছে PIN লক এবং AES এনক্রিপ্টেড ব্যাকআপ।
+            কোনো ট্র্যাকিং বা বিজ্ঞাপন নেই। সব তথ্য আপনার ডিভাইসেই থাকে; সাথে রয়েছে Argon2 পিন লক এবং AES-256-GCM এনক্রিপ্টেড ব্যাকআপ।
           </p>
           {nativeDbHash && (
             <div className="text-[11px] font-mono-code ts-accent-text pt-1">
@@ -107,31 +114,29 @@ export default function AboutView({ nativeDbHash, onOpenFeedbackModal }: AboutVi
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-            <a
-              href="https://www.facebook.com/itsmanzur"
-              target="_blank"
-              rel="noreferrer"
-              className="p-3 rounded-xl border border-[#D2DDD8] flex items-center justify-between hover:bg-[#0E5A45]/10 transition"
+            <button
+              type="button"
+              onClick={() => openExternal('https://www.facebook.com/itsmanzur')}
+              className="p-3 rounded-xl border border-[#D2DDD8] flex items-center justify-between text-left hover:bg-[#0E5A45]/10 transition"
             >
               <div>
                 <div className="text-xs font-bold">Facebook</div>
                 <div className="text-[11px] ts-muted-text">/itsmanzur</div>
               </div>
               <ExternalLink className="w-4 h-4 ts-accent-text" />
-            </a>
+            </button>
 
-            <a
-              href="https://www.linkedin.com/in/md-manzurul-islam-114837150/"
-              target="_blank"
-              rel="noreferrer"
-              className="p-3 rounded-xl border border-[#D2DDD8] flex items-center justify-between hover:bg-[#0E5A45]/10 transition"
+            <button
+              type="button"
+              onClick={() => openExternal('https://www.linkedin.com/in/md-manzurul-islam-114837150/')}
+              className="p-3 rounded-xl border border-[#D2DDD8] flex items-center justify-between text-left hover:bg-[#0E5A45]/10 transition"
             >
               <div>
                 <div className="text-xs font-bold">LinkedIn</div>
                 <div className="text-[11px] ts-muted-text">md-manzurul-islam</div>
               </div>
               <ExternalLink className="w-4 h-4 ts-accent-text" />
-            </a>
+            </button>
           </div>
         </div>
 

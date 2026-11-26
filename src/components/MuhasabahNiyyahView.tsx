@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { invoke } from '@tauri-apps/api/core';
 import { BookOpen, CalendarCheck2, Check, CheckCircle2, Flame, Plus, Sparkles, Star, Target, Trash2 } from 'lucide-react';
+import { getLocalDateKey } from '../lib/date';
 
 export interface HabitItem {
   id: string;
@@ -23,7 +24,7 @@ function computeHabitStreak(days: Record<string, boolean>): number {
   for (let i = 0; i < 365; i++) {
     const d = new Date(now);
     d.setDate(now.getDate() - i);
-    const key = d.toISOString().split('T')[0];
+    const key = getLocalDateKey(d);
     if (days[key]) {
       streak++;
     } else if (i > 0) {
@@ -120,7 +121,7 @@ export default function MuhasabahNiyyahView({
       const d = new Date(now);
       d.setDate(now.getDate() - i);
       arr.push({
-        key: d.toISOString().split('T')[0],
+        key: getLocalDateKey(d),
         dayBn: dayNames[d.getDay()],
         num: d.getDate(),
         isToday: i === 0,
@@ -136,14 +137,14 @@ export default function MuhasabahNiyyahView({
       const d = new Date(now);
       d.setDate(now.getDate() - i);
       arr.push({
-        key: d.toISOString().split('T')[0],
+        key: getLocalDateKey(d),
         label: d.toLocaleDateString('bn-BD', { day: 'numeric', month: 'short' }),
       });
     }
     return arr;
   }, []);
 
-  const todayKey = last7Days[6]?.key || new Date().toISOString().split('T')[0];
+  const todayKey = last7Days[6]?.key || getLocalDateKey();
   const todayDoneCount = habits.filter((h) => h.days[todayKey]).length;
   const todayPct = habits.length > 0 ? Math.round((todayDoneCount / habits.length) * 100) : 0;
   const bestStreak = habits.reduce((mx, h) => Math.max(mx, computeHabitStreak(h.days)), 0);

@@ -15,6 +15,7 @@ import SettingsView, { DEFAULT_DASHBOARD_WIDGETS, DEFAULT_UI_PREFS, UiPrefs } fr
 import AboutView from './components/AboutView';
 import { OnboardingWizard, PinLockScreen, PinSettingsModal } from './components/OnboardingAndPin';
 import { CITY_PRESETS, computeOfflinePrayerTimes } from './lib/prayerTimes';
+import { getLocalDateKey } from './lib/date';
 
 const DEFAULT_ITEMS = rawEntries as TaskeenItem[];
 
@@ -308,7 +309,7 @@ export default function App() {
   }, [reminders]);
 
   const cyclePrayer = (prayer: PrayerName) => {
-    const todayKey = new Date().toISOString().split('T')[0];
+    const todayKey = getLocalDateKey();
     const order: PrayerStatus[] = ['pending', 'done', 'qaza', 'missed'];
     setPrayers((prev) => {
       const curDay: PrayerDay = prev[todayKey] || {
@@ -324,12 +325,20 @@ export default function App() {
     });
   };
 
+  const logsHydratedRef = useRef<boolean>(false);
+
   useEffect(() => {
     (async () => {
       try {
+        let localCustom: TaskeenItem[] = [];
+        try {
+          const saved = JSON.parse(localStorage.getItem('taskeen_local_v1') || '{}');
+          if (Array.isArray(saved.customItems)) localCustom = saved.customItems;
+        } catch {}
+
         const dbItems = await invoke<TaskeenItem[]>('fetch_items');
         if (Array.isArray(dbItems) && dbItems.length > 0) {
-          setItems(dbItems);
+          setItems([...localCustom, ...dbItems]);
           setSelectedId((prev) => prev || dbItems[0].id);
         }
         const status = await invoke<{ db_sha256: string }>('get_app_status');
@@ -349,6 +358,7 @@ export default function App() {
           setFavorites((p) => Array.from(new Set([...p, ...favs])));
           setTadabburNotes((p) => ({ ...p, ...notes }));
         }
+        logsHydratedRef.current = true;
 
         const kvRows = await invoke<Array<{ key: string; value: string }>>('load_user_kv');
         if (Array.isArray(kvRows) && kvRows.length > 0) {
@@ -369,6 +379,12 @@ export default function App() {
                 setDailyDone(parsed);
               } else if (row.key === 'reminders') {
                 setReminders(parsed);
+              } else if (row.key === 'custom_items' && Array.isArray(parsed)) {
+                setItems((prev) => {
+                  const existingIds = new Set(prev.map((x) => x.id));
+                  const extra = (parsed as TaskeenItem[]).filter((x) => !existingIds.has(x.id));
+                  return extra.length > 0 ? [...extra, ...prev] : prev;
+                });
               }
             } catch {}
           });
@@ -382,6 +398,7 @@ export default function App() {
         }
         kvHydratedRef.current = true;
       } catch {
+        logsHydratedRef.current = true;
         kvHydratedRef.current = true;
         // Browser preview fallback: uses bundled JSON + localStorage
       }
@@ -397,6 +414,9 @@ export default function App() {
         'taskeen_local_v1',
         JSON.stringify({ customItems, favorites, counts, verifiedMap, dailyDone, tadabburNotes })
       );
+      if (kvHydratedRef.current) {
+        invoke('upsert_user_kv', { key: 'custom_items', value: JSON.stringify(customItems) }).catch(() => {});
+      }
     } catch {}
   }, [items, favorites, counts, verifiedMap, dailyDone, tadabburNotes]);
 
@@ -448,16 +468,21 @@ export default function App() {
       return;
     }
     let cancelled = false;
-    invoke<TaskeenItem[]>('search_items', { query: q })
-      .then((res) => {
-        if (!cancelled && Array.isArray(res)) {
-          setFtsIds(new Set(res.map((r) => r.id)));
-        }
-      })
-      .catch(() => {
-        if (!cancelled) setFtsIds(null);
-      });
-    return () => { cancelled = true; };
+    const timer = window.setTimeout(() => {
+      invoke<TaskeenItem[]>('search_items', { query: q })
+        .then((res) => {
+          if (!cancelled && Array.isArray(res)) {
+            setFtsIds(new Set(res.map((r) => r.id)));
+          }
+        })
+        .catch(() => {
+          if (!cancelled) setFtsIds(null);
+        });
+    }, 200);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
   }, [search]);
 
   const filteredItems = useMemo(() => {
@@ -482,13 +507,16 @@ export default function App() {
   }, [filteredItems, selectedId, items]);
 
   useEffect(() => {
-    if (!selectedItem) return;
-    invoke('upsert_user_log', {
-      itemId: selectedItem.id,
-      tasbihCount: counts[selectedItem.id] || 0,
-      isFavorite: favorites.includes(selectedItem.id),
-      tadabburNote: tadabburNotes[selectedItem.id] || '',
-    }).catch(() => {});
+    if (!selectedItem || !logsHydratedRef.current) return;
+    const timer = window.setTimeout(() => {
+      invoke('upsert_user_log', {
+        itemId: selectedItem.id,
+        tasbihCount: counts[selectedItem.id] || 0,
+        isFavorite: favorites.includes(selectedItem.id),
+        tadabburNote: tadabburNotes[selectedItem.id] || '',
+      }).catch(() => {});
+    }, 500);
+    return () => window.clearTimeout(timer);
   }, [selectedItem, counts, favorites, tadabburNotes]);
 
   const toggleMiniMode = () => {
@@ -532,7 +560,7 @@ export default function App() {
         const now = new Date();
         const nowMins = now.getHours() * 60 + now.getMinutes();
         const hhmm = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
-        const dateKey = now.toISOString().split('T')[0];
+        const dateKey = getLocalDateKey(now);
         let prefs = { lat: 23.8103, lng: 90.4125, tz: 6, method: 'Karachi' as const, madhab: 'Hanafi' as const };
         try {
           const saved = localStorage.getItem('taskeen_prayer_prefs_v1');
@@ -802,6 +830,10 @@ export default function App() {
   const verifiedTotal = items.filter((i) => verifiedMap[i.id]).length;
   const currentCount = selectedItem ? counts[selectedItem.id] || 0 : 0;
 
+  if (isLocked && appPin) {
+    return <PinLockScreen expectedPin={appPin} onUnlock={() => setIsLocked(false)} />;
+  }
+
   if (miniMode && selectedItem) {
     return (
       <div className={`${darkMode ? 'bg-[#080D0B] text-[#E7EFEA]' : 'bg-[#F7FAF8] text-[#0F1A17]'} min-h-screen p-4 flex flex-col justify-between`}>
@@ -819,10 +851,6 @@ export default function App() {
         </button>
       </div>
     );
-  }
-
-  if (isLocked && appPin) {
-    return <PinLockScreen expectedPin={appPin} onUnlock={() => setIsLocked(false)} />;
   }
 
   const dailyCompletedCount = DAILY_AMAL_LIST.filter((a) => dailyDone[a.id]).length;
@@ -991,7 +1019,7 @@ export default function App() {
             sadaqahList={sadaqahList}
             fastingDays={fastingDays}
             onToggleFasting={() => {
-              const todayKey = new Date().toISOString().split('T')[0];
+              const todayKey = getLocalDateKey();
               setFastingDays((p) => {
                 const next = !p[todayKey];
                 notify(next ? 'মাশাআল্লাহ! আজকের রোজা লগ হয়েছে।' : 'আজকের রোজা সরানো হয়েছে।');
@@ -1572,7 +1600,7 @@ export default function App() {
                 type="password"
                 value={backupPass}
                 onChange={(e) => setBackupPass(e.target.value)}
-                placeholder="পাসওয়ার্ড দিন (কমপক্ষে ৪ অক্ষর)"
+                placeholder="পাসওয়ার্ড দিন (কমপক্ষে ১০ অক্ষর)"
                 className="w-full px-3 py-2 rounded border bg-white"
               />
               <button
@@ -1583,7 +1611,7 @@ export default function App() {
                     const url = URL.createObjectURL(blob);
                     const a = document.createElement('a');
                     a.href = url;
-                    a.download = `taskeen-${new Date().toISOString().slice(0, 10)}.taskeen-backup`;
+                    a.download = `taskeen-${getLocalDateKey()}.taskeen-backup`;
                     a.click();
                     URL.revokeObjectURL(url);
                     setBackupPass('');
@@ -1667,18 +1695,12 @@ export default function App() {
                     setCloudSyncBusy(true);
                     try {
                       const pass = backupPass || restorePass;
-                      const encrypted = await invoke<string>('export_backup', { passphrase: pass });
-                      const headers: Record<string, string> = { 'Content-Type': 'application/json', Prefer: 'resolution=merge-duplicates' };
-                      if (cloudSyncKey.trim()) {
-                        headers['apikey'] = cloudSyncKey.trim();
-                        headers['Authorization'] = `Bearer ${cloudSyncKey.trim()}`;
-                      }
-                      const res = await fetch(cloudSyncUrl.trim(), {
-                        method: 'POST',
-                        headers,
-                        body: JSON.stringify({ id: cloudSyncId || 'taskeen-main', payload: encrypted, updated_at: new Date().toISOString() }),
+                      await invoke('cloud_sync_push', {
+                        url: cloudSyncUrl.trim(),
+                        apiKey: cloudSyncKey.trim(),
+                        syncId: cloudSyncId || 'taskeen-main',
+                        passphrase: pass,
                       });
-                      if (!res.ok) throw new Error(`HTTP ${res.status}`);
                       notify('এনক্রিপ্টেড ব্যাকআপ ক্লাউডে সিঙ্ক হয়েছে');
                     } catch (err) {
                       notify(`ক্লাউড সিঙ্ক ত্রুটি: ${String(err)}`);
@@ -1695,20 +1717,14 @@ export default function App() {
                   onClick={async () => {
                     setCloudSyncBusy(true);
                     try {
-                      const headers: Record<string, string> = {};
-                      if (cloudSyncKey.trim()) {
-                        headers['apikey'] = cloudSyncKey.trim();
-                        headers['Authorization'] = `Bearer ${cloudSyncKey.trim()}`;
-                      }
                       const sep = cloudSyncUrl.includes('?') ? '&' : '?';
                       const url = `${cloudSyncUrl.trim()}${sep}id=eq.${encodeURIComponent(cloudSyncId || 'taskeen-main')}`;
-                      const res = await fetch(url, { headers });
-                      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-                      const json = await res.json();
-                      const row = Array.isArray(json) ? json[0] : json;
-                      const content = typeof row?.payload === 'string' ? row.payload : JSON.stringify(row?.payload || row);
                       const pass = restorePass || backupPass;
-                      const restoredCount = await invoke<number>('import_backup', { content, passphrase: pass });
+                      const restoredCount = await invoke<number>('cloud_sync_pull', {
+                        url,
+                        apiKey: cloudSyncKey.trim(),
+                        passphrase: pass,
+                      });
                       await reloadAllUserDataFromSqlite();
                       setShowBackupModal(false);
                       notify(`ক্লাউড থেকে ${restoredCount}টি রেকর্ড রিস্টোর হয়েছে`);
@@ -1746,13 +1762,13 @@ export default function App() {
                 story_title: String(fd.get('storyTitle') || 'প্রামাণিক ঘটনা'),
                 story_context: String(fd.get('story') || ''),
                 primary_source: String(fd.get('source') || ''),
-                hadith_grade: String(fd.get('grade') || 'Sahih'),
+                hadith_grade: String(fd.get('grade') || 'Unknown'),
                 recommended_count: 33,
-                verified: true,
-                alim_note: 'সরাসরি যুক্ত ও যাচাইকৃত।',
+                verified: false,
+                alim_note: 'ব্যক্তিগতভাবে যুক্ত (অযাচাইকৃত)',
               };
               setItems([item, ...items]);
-              setVerifiedMap((p) => ({ ...p, [item.id]: true }));
+              setVerifiedMap((p) => ({ ...p, [item.id]: false }));
               setSelectedId(item.id);
               setShowAddModal(false);
               notify('নতুন এন্ট্রি যুক্ত হয়েছে');
@@ -1761,7 +1777,10 @@ export default function App() {
           >
             <div className="flex justify-between items-center mb-2"><h3 className="font-serif-bn font-bold text-base">নতুন এন্ট্রি যোগ করুন</h3><button type="button" onClick={() => setShowAddModal(false)}>✕</button></div>
             <input name="title" required placeholder="শিরোনাম (বাংলায়)" className="w-full px-3 py-2 rounded border" />
-            <select name="category" className="w-full px-3 py-2 rounded border"><option value="dua">দোয়া</option><option value="durood">দরুদ</option><option value="istighfar">ইস্তেগফার</option></select>
+            <div className="grid grid-cols-2 gap-2">
+              <select name="category" className="w-full px-3 py-2 rounded border"><option value="dua">দোয়া</option><option value="durood">দরুদ</option><option value="istighfar">ইস্তেগফার</option></select>
+              <select name="grade" defaultValue="Unknown" className="w-full px-3 py-2 rounded border"><option value="Unknown">হাদীসের মান: অযাচাইকৃত</option><option value="Sahih">সহীহ (Sahih)</option><option value="Hasan">হাসান (Hasan)</option><option value="Daif">যঈফ (Daif)</option></select>
+            </div>
             <textarea name="arabic" required rows={2} dir="rtl" placeholder="আরবি পাঠ" className="w-full px-3 py-2 rounded border font-arabic-amiri text-base" />
             <textarea name="bangla" required rows={2} placeholder="বাংলা অনুবাদ" className="w-full px-3 py-2 rounded border" />
             <textarea name="fazilat" required rows={2} placeholder="ফজিলত" className="w-full px-3 py-2 rounded border" />

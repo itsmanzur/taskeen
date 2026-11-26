@@ -1,4 +1,5 @@
 import React, { useMemo, useRef, useState } from 'react';
+import { getLocalDateKey } from '../lib/date';
 import {
   BarChart3,
   CheckCircle2,
@@ -132,7 +133,7 @@ export default function TodoQiblaReportsView({
     for (let i = days - 1; i >= 0; i--) {
       const d = new Date(today);
       d.setDate(today.getDate() - i);
-      const key = d.toISOString().split('T')[0];
+      const key = getLocalDateKey(d);
       const day = prayers[key];
       let dayDone = 0;
       if (day) {

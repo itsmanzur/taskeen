@@ -1,3 +1,12 @@
+use aes_gcm::{
+    aead::{Aead, KeyInit},
+    Aes256Gcm, Nonce,
+};
+use argon2::{
+    password_hash::{PasswordHash, PasswordHasher, PasswordVerifier, SaltString},
+    Argon2,
+};
+use rand_core::{OsRng, RngCore};
 use rusqlite::{params, Connection, Result};
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
@@ -43,12 +52,14 @@ pub struct DbStatus {
     pub version: String,
     pub item_count: usize,
     pub db_sha256: String,
+    pub db_verified: bool,
 }
 
 pub struct DbState {
     pub content_conn: Mutex<Connection>,
     pub user_conn: Mutex<Connection>,
     pub db_sha256: String,
+    pub db_verified: bool,
 }
 
 pub fn compute_sha256(path: &Path) -> Result<String, String> {
@@ -60,7 +71,9 @@ pub fn compute_sha256(path: &Path) -> Result<String, String> {
 
 pub fn init_user_tables(conn: &Connection) -> Result<()> {
     conn.execute_batch(
-        "CREATE TABLE IF NOT EXISTS user_logs (
+        "PRAGMA journal_mode=WAL;
+         PRAGMA synchronous=NORMAL;
+         CREATE TABLE IF NOT EXISTS user_logs (
             item_id TEXT PRIMARY KEY,
             tasbih_count INTEGER NOT NULL DEFAULT 0,
             is_favorite INTEGER NOT NULL DEFAULT 0,
@@ -73,6 +86,13 @@ pub fn init_user_tables(conn: &Connection) -> Result<()> {
             updated_at TEXT NOT NULL
         );"
     )
+}
+
+pub fn get_item_count(conn: &Connection) -> Result<usize, String> {
+    let count: i64 = conn
+        .query_row("SELECT COUNT(*) FROM items", [], |row| row.get(0))
+        .map_err(|e| e.to_string())?;
+    Ok(count.max(0) as usize)
 }
 
 pub fn get_all_items(conn: &Connection) -> Result<Vec<TaskeenItem>, String> {
@@ -110,12 +130,24 @@ pub fn get_all_items(conn: &Connection) -> Result<Vec<TaskeenItem>, String> {
     rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())
 }
 
+fn strip_arabic_diacritics(s: &str) -> String {
+    s.chars()
+        .filter(|&c| !('\u{064B}'..='\u{065F}').contains(&c) && c != '\u{0670}' && c != '\u{0640}')
+        .collect()
+}
+
+fn escape_like(s: &str) -> String {
+    s.replace('\\', "\\\\")
+        .replace('%', "\\%")
+        .replace('_', "\\_")
+}
+
 pub fn search_items_fts(conn: &Connection, query: &str) -> Result<Vec<TaskeenItem>, String> {
     let clean = query.trim();
     if clean.is_empty() {
         return get_all_items(conn);
     }
-    let like_pattern = format!("%{}%", clean);
+    let like_pattern = format!("%{}%", escape_like(clean));
     let safe_token = clean.replace('"', "").replace('*', "");
     let fts_query = format!("\"{}\"*", safe_token);
 
@@ -126,11 +158,12 @@ pub fn search_items_fts(conn: &Connection, query: &str) -> Result<Vec<TaskeenIte
                     i.hadith_grade, i.recommended_count, i.alim_note
              FROM items i
              WHERE i.id IN (SELECT id FROM items_fts WHERE items_fts MATCH ?1)
-                OR i.title_bn LIKE ?2
-                OR i.primary_source LIKE ?2
-                OR i.bangla_pronunciation LIKE ?2
-                OR i.bangla_meaning LIKE ?2
-                OR i.hadith_grade LIKE ?2"
+                OR i.title_bn LIKE ?2 ESCAPE '\\'
+                OR i.primary_source LIKE ?2 ESCAPE '\\'
+                OR i.bangla_pronunciation LIKE ?2 ESCAPE '\\'
+                OR i.bangla_meaning LIKE ?2 ESCAPE '\\'
+                OR i.hadith_grade LIKE ?2 ESCAPE '\\'
+                OR i.arabic_uthmani LIKE ?2 ESCAPE '\\'"
         )
         .map_err(|e| e.to_string())?;
 
@@ -156,7 +189,22 @@ pub fn search_items_fts(conn: &Connection, query: &str) -> Result<Vec<TaskeenIte
         })
         .map_err(|e| e.to_string())?;
 
-    rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())
+    let mut results = rows.collect::<Result<Vec<_>, _>>().map_err(|e| e.to_string())?;
+
+    // If query contains Arabic characters and direct match missed harakat, search normalized Arabic
+    let norm_q = strip_arabic_diacritics(clean);
+    if !norm_q.is_empty() && norm_q.chars().any(|c| ('\u{0600}'..='\u{06FF}').contains(&c)) {
+        let all = get_all_items(conn)?;
+        for item in all {
+            if !results.iter().any(|r| r.id == item.id)
+                && strip_arabic_diacritics(&item.arabic_uthmani).contains(&norm_q)
+            {
+                results.push(item);
+            }
+        }
+    }
+
+    Ok(results)
 }
 
 pub fn get_user_logs(conn: &Connection) -> Result<Vec<UserLogRow>, String> {
@@ -236,14 +284,22 @@ struct FullBackupPayload {
 }
 
 #[derive(Debug, Serialize, Deserialize)]
-struct EncryptedBackupEnvelope {
+struct EncryptedBackupEnvelopeV1 {
     format: String,
     salt: String,
     tag: String,
     data: String,
 }
 
-fn derive_key(passphrase: &str, salt: &[u8]) -> [u8; 32] {
+#[derive(Debug, Serialize, Deserialize)]
+struct EncryptedBackupEnvelopeV2 {
+    format: String,
+    salt: String,
+    nonce: String,
+    data: String,
+}
+
+fn derive_key_v1(passphrase: &str, salt: &[u8]) -> [u8; 32] {
     let mut state = [0u8; 32];
     let mut hasher = Sha256::new();
     hasher.update(salt);
@@ -258,7 +314,7 @@ fn derive_key(passphrase: &str, salt: &[u8]) -> [u8; 32] {
     state
 }
 
-fn xor_stream(key: &[u8; 32], salt: &[u8], input: &[u8]) -> Vec<u8> {
+fn xor_stream_v1(key: &[u8; 32], salt: &[u8], input: &[u8]) -> Vec<u8> {
     let mut out = Vec::with_capacity(input.len());
     let mut counter: u64 = 0;
     for chunk in input.chunks(32) {
@@ -275,7 +331,7 @@ fn xor_stream(key: &[u8; 32], salt: &[u8], input: &[u8]) -> Vec<u8> {
     out
 }
 
-fn compute_tag(key: &[u8; 32], salt: &[u8], ciphertext: &[u8]) -> String {
+fn compute_tag_v1(key: &[u8; 32], salt: &[u8], ciphertext: &[u8]) -> String {
     let mut h = Sha256::new();
     h.update(key);
     h.update(salt);
@@ -283,9 +339,33 @@ fn compute_tag(key: &[u8; 32], salt: &[u8], ciphertext: &[u8]) -> String {
     hex::encode(h.finalize())
 }
 
+fn derive_key_argon2(passphrase: &str, salt: &[u8]) -> Result<[u8; 32], String> {
+    let mut key = [0u8; 32];
+    Argon2::default()
+        .hash_password_into(passphrase.as_bytes(), salt, &mut key)
+        .map_err(|e| e.to_string())?;
+    Ok(key)
+}
+
+pub fn hash_pin(pin: &str) -> Result<String, String> {
+    let salt = SaltString::generate(&mut OsRng);
+    Argon2::default()
+        .hash_password(pin.as_bytes(), &salt)
+        .map(|h| h.to_string())
+        .map_err(|e| e.to_string())
+}
+
+pub fn verify_pin(pin: &str, stored_hash: &str) -> bool {
+    if let Ok(parsed) = PasswordHash::new(stored_hash) {
+        Argon2::default().verify_password(pin.as_bytes(), &parsed).is_ok()
+    } else {
+        false
+    }
+}
+
 pub fn export_encrypted_backup(conn: &Connection, passphrase: &str) -> Result<String, String> {
-    if passphrase.trim().len() < 4 {
-        return Err("পাসওয়ার্ড কমপক্ষে ৪ অক্ষরের হতে হবে".to_string());
+    if passphrase.trim().len() < 10 {
+        return Err("নিরাপত্তার জন্য পাসওয়ার্ড কমপক্ষে ১০ অক্ষরের হতে হবে".to_string());
     }
     let logs = get_user_logs(conn)?;
     let kv = get_all_kv(conn)?;
@@ -296,43 +376,61 @@ pub fn export_encrypted_backup(conn: &Connection, passphrase: &str) -> Result<St
     };
     let payload = serde_json::to_vec(&full).map_err(|e| e.to_string())?;
 
-    let nanos = std::time::SystemTime::now()
-        .duration_since(std::time::UNIX_EPOCH)
-        .map(|d| d.as_nanos())
-        .unwrap_or(0);
-    let mut salt_hasher = Sha256::new();
-    salt_hasher.update(&nanos.to_le_bytes());
-    salt_hasher.update(passphrase.as_bytes());
-    let salt_full = salt_hasher.finalize();
-    let salt = &salt_full[..16];
+    let mut salt = [0u8; 16];
+    let mut nonce_bytes = [0u8; 12];
+    OsRng.fill_bytes(&mut salt);
+    OsRng.fill_bytes(&mut nonce_bytes);
 
-    let key = derive_key(passphrase, salt);
-    let ciphertext = xor_stream(&key, salt, &payload);
-    let tag = compute_tag(&key, salt, &ciphertext);
+    let key = derive_key_argon2(passphrase, &salt)?;
+    let cipher = Aes256Gcm::new_from_slice(&key).map_err(|e| e.to_string())?;
+    let nonce = Nonce::from_slice(&nonce_bytes);
+    let ciphertext = cipher
+        .encrypt(nonce, payload.as_ref())
+        .map_err(|_| "এনক্রিপ্ট করতে সমস্যা হয়েছে".to_string())?;
 
-    let env = EncryptedBackupEnvelope {
-        format: "taskeen-backup-v1".to_string(),
+    let env = EncryptedBackupEnvelopeV2 {
+        format: "taskeen-backup-v2".to_string(),
         salt: hex::encode(salt),
-        tag,
+        nonce: hex::encode(nonce_bytes),
         data: hex::encode(ciphertext),
     };
     serde_json::to_string_pretty(&env).map_err(|e| e.to_string())
 }
 
 pub fn import_encrypted_backup(conn: &Connection, content: &str, passphrase: &str) -> Result<usize, String> {
-    let env: EncryptedBackupEnvelope =
+    let val: serde_json::Value =
         serde_json::from_str(content).map_err(|_| "অবৈধ ব্যাকআপ ফাইল ফরম্যাট".to_string())?;
-    if env.format != "taskeen-backup-v1" {
+    let format = val.get("format").and_then(|v| v.as_str()).unwrap_or("");
+
+    let plaintext = if format == "taskeen-backup-v2" {
+        let env: EncryptedBackupEnvelopeV2 =
+            serde_json::from_value(val).map_err(|_| "অবৈধ v2 ব্যাকআপ ফাইল".to_string())?;
+        let salt = hex::decode(&env.salt).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
+        let nonce_bytes = hex::decode(&env.nonce).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
+        let ciphertext = hex::decode(&env.data).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
+        if nonce_bytes.len() != 12 {
+            return Err("ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string());
+        }
+        let key = derive_key_argon2(passphrase, &salt)?;
+        let cipher = Aes256Gcm::new_from_slice(&key).map_err(|e| e.to_string())?;
+        let nonce = Nonce::from_slice(&nonce_bytes);
+        cipher
+            .decrypt(nonce, ciphertext.as_ref())
+            .map_err(|_| "ভুল পাসওয়ার্ড অথবা ব্যাকআপ ফাইল পরিবর্তিত হয়েছে".to_string())?
+    } else if format == "taskeen-backup-v1" {
+        let env: EncryptedBackupEnvelopeV1 =
+            serde_json::from_value(val).map_err(|_| "অবৈধ v1 ব্যাকআপ ফাইল".to_string())?;
+        let salt = hex::decode(&env.salt).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
+        let ciphertext = hex::decode(&env.data).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
+        let key = derive_key_v1(passphrase, &salt);
+        let expected_tag = compute_tag_v1(&key, &salt, &ciphertext);
+        if expected_tag != env.tag {
+            return Err("ভুল পাসওয়ার্ড অথবা ব্যাকআপ ফাইল পরিবর্তিত হয়েছে".to_string());
+        }
+        xor_stream_v1(&key, &salt, &ciphertext)
+    } else {
         return Err("অসমর্থিত ব্যাকআপ ভার্সন".to_string());
-    }
-    let salt = hex::decode(&env.salt).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
-    let ciphertext = hex::decode(&env.data).map_err(|_| "ব্যাকআপ ফাইল ক্ষতিগ্রস্ত".to_string())?;
-    let key = derive_key(passphrase, &salt);
-    let expected_tag = compute_tag(&key, &salt, &ciphertext);
-    if expected_tag != env.tag {
-        return Err("ভুল পাসওয়ার্ড অথবা ব্যাকআপ ফাইল পরিবর্তিত হয়েছে".to_string());
-    }
-    let plaintext = xor_stream(&key, &salt, &ciphertext);
+    };
 
     if let Ok(full) = serde_json::from_slice::<FullBackupPayload>(&plaintext) {
         let total = full.logs.len() + full.kv.len();
@@ -366,15 +464,17 @@ mod tests {
         save_user_log(&conn, "dua_01", 33, true, "সকালের দোয়া").unwrap();
         set_kv(&conn, "amalify_state", r#"{"zakatWealth":50000}"#).unwrap();
 
-        let backup = export_encrypted_backup(&conn, "secret123").unwrap();
+        assert!(export_encrypted_backup(&conn, "short").is_err());
+        let backup = export_encrypted_backup(&conn, "strongpass123").unwrap();
+        assert!(backup.contains("taskeen-backup-v2"));
 
         // Wrong passphrase must fail
-        assert!(import_encrypted_backup(&conn, &backup, "wrong").is_err());
+        assert!(import_encrypted_backup(&conn, &backup, "wrongpass123").is_err());
 
         // Restore into a fresh DB
         let conn2 = Connection::open_in_memory().unwrap();
         init_user_tables(&conn2).unwrap();
-        let restored = import_encrypted_backup(&conn2, &backup, "secret123").unwrap();
+        let restored = import_encrypted_backup(&conn2, &backup, "strongpass123").unwrap();
         assert_eq!(restored, 2);
 
         let logs = get_user_logs(&conn2).unwrap();
@@ -385,5 +485,10 @@ mod tests {
         let kv = get_all_kv(&conn2).unwrap();
         assert_eq!(kv.len(), 1);
         assert_eq!(kv[0].key, "amalify_state");
+
+        // PIN Argon2 hash/verify roundtrip
+        let hashed = hash_pin("123456").unwrap();
+        assert!(verify_pin("123456", &hashed));
+        assert!(!verify_pin("654321", &hashed));
     }
 }

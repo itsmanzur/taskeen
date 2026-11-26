@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { invoke } from '@tauri-apps/api/core';
 import { Lock, ShieldCheck, Sparkles } from 'lucide-react';
 import { AsrMadhab, CITY_PRESETS } from '../lib/prayerTimes';
 
@@ -92,14 +93,49 @@ interface PinLockScreenProps {
 export function PinLockScreen({ expectedPin, onUnlock }: PinLockScreenProps) {
   const [input, setInput] = useState('');
   const [err, setErr] = useState('');
+  const [attempts, setAttempts] = useState(0);
+  const [lockUntil, setLockUntil] = useState<number>(0);
+  const [nowSec, setNowSec] = useState<number>(() => Math.floor(Date.now() / 1000));
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    if (lockUntil <= nowSec) return;
+    const id = window.setInterval(() => setNowSec(Math.floor(Date.now() / 1000)), 1000);
+    return () => window.clearInterval(id);
+  }, [lockUntil, nowSec]);
+
+  const cooldownLeft = Math.max(0, lockUntil - nowSec);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (input === expectedPin) {
+    if (cooldownLeft > 0) return;
+
+    let ok = false;
+    if (expectedPin.startsWith('$argon2')) {
+      try {
+        ok = await invoke<boolean>('verify_app_pin', { pin: input, storedHash: expectedPin });
+      } catch {
+        ok = false;
+      }
+    } else {
+      ok = input === expectedPin;
+    }
+
+    if (ok) {
       setErr('');
+      setAttempts(0);
       onUnlock();
     } else {
-      setErr('ভুল পিন! আবার চেষ্টা করুন।');
+      const nextAttempts = attempts + 1;
+      setAttempts(nextAttempts);
+      if (nextAttempts >= 5) {
+        const waitSecs = Math.min(300, 30 * Math.pow(2, nextAttempts - 5));
+        const until = Math.floor(Date.now() / 1000) + waitSecs;
+        setLockUntil(until);
+        setNowSec(Math.floor(Date.now() / 1000));
+        setErr(`অনেকবার ভুল পিন! ${waitSecs} সেকেন্ড অপেক্ষা করুন।`);
+      } else {
+        setErr(`ভুল পিন! আবার চেষ্টা করুন (${nextAttempts}/5)।`);
+      }
       setInput('');
     }
   };
@@ -112,21 +148,26 @@ export function PinLockScreen({ expectedPin, onUnlock }: PinLockScreenProps) {
         </div>
         <div>
           <h2 className="font-serif-bn font-bold text-lg">তাসকীন প্রাইভেসি লক</h2>
-          <p className="text-xs opacity-70 mt-1">অ্যাপ খুলতে আপনার ৪ ডিজিটের পিন দিন</p>
+          <p className="text-xs opacity-70 mt-1">অ্যাপ খুলতে আপনার ৪–৬ ডিজিটের পিন দিন</p>
         </div>
         <input
           type="password"
           inputMode="numeric"
           maxLength={6}
           autoFocus
+          disabled={cooldownLeft > 0}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={(e) => setInput(e.target.value.replace(/\D/g, ''))}
           placeholder="••••"
-          className="w-full text-center tracking-[0.5em] text-xl font-mono-code px-3 py-2.5 rounded-xl bg-[#0C1411] border border-[#243832] text-white"
+          className="w-full text-center tracking-[0.5em] text-xl font-mono-code px-3 py-2.5 rounded-xl bg-[#0C1411] border border-[#243832] text-white disabled:opacity-50"
         />
         {err && <p className="text-xs text-red-400">{err}</p>}
-        <button type="submit" className="w-full py-2.5 rounded-xl bg-[#0E5A45] text-white text-xs font-bold">
-          আনলক করুন
+        <button
+          type="submit"
+          disabled={cooldownLeft > 0 || input.length < 4}
+          className="w-full py-2.5 rounded-xl bg-[#0E5A45] text-white text-xs font-bold disabled:opacity-50"
+        >
+          {cooldownLeft > 0 ? `অপেক্ষা করুন (${cooldownLeft}s)` : 'আনলক করুন'}
         </button>
       </form>
     </div>
@@ -141,6 +182,7 @@ interface PinModalProps {
 
 export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) {
   const [pin, setPin] = useState('');
+  const [busy, setBusy] = useState(false);
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
@@ -152,15 +194,15 @@ export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) 
           <button onClick={onClose}>✕</button>
         </div>
         <p className="opacity-75">
-          আপনার ব্যক্তিগত মুহাসাবাহ ও ওসিয়তনামা সুরক্ষিত রাখতে ৪ ডিজিটের পিন সেট করুন।
+          আপনার ব্যক্তিগত মুহাসাবাহ ও ওসিয়তনামা সুরক্ষিত রাখতে ৪–৬ ডিজিটের পিন সেট করুন (Argon2 দ্বারা সুরক্ষিত)।
         </p>
         <input
           type="password"
           inputMode="numeric"
           maxLength={6}
           value={pin}
-          onChange={(e) => setPin(e.target.value)}
-          placeholder="নতুন ৪-৬ ডিজিটের পিন"
+          onChange={(e) => setPin(e.target.value.replace(/\D/g, ''))}
+          placeholder="নতুন ৪–৬ ডিজিটের পিন (শুধু সংখ্যা)"
           className="w-full px-3 py-2 rounded-xl border border-[#D2DDD8] font-mono-code"
         />
         <div className="flex gap-2">
@@ -176,14 +218,23 @@ export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) 
             </button>
           )}
           <button
-            onClick={() => {
-              if (pin.trim().length < 4) return;
-              onSavePin(pin.trim());
-              onClose();
+            disabled={busy || pin.length < 4}
+            onClick={async () => {
+              if (!/^\d{4,6}$/.test(pin)) return;
+              setBusy(true);
+              try {
+                const hashed = await invoke<string>('hash_app_pin', { pin });
+                onSavePin(hashed);
+              } catch {
+                onSavePin(pin);
+              } finally {
+                setBusy(false);
+                onClose();
+              }
             }}
-            className="flex-1 py-2 rounded-xl bg-[#0E5A45] text-white font-semibold"
+            className="flex-1 py-2 rounded-xl bg-[#0E5A45] text-white font-semibold disabled:opacity-50"
           >
-            পিন সেভ করুন
+            {busy ? 'সংরক্ষণ হচ্ছে...' : 'পিন সেভ করুন'}
           </button>
         </div>
       </div>

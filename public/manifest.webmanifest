@@ -4,12 +4,17 @@
   "description": "১০০% অফলাইন-ফার্স্ট ও আলেম-যাচাইকৃত দোয়া, দরুদ, নামাজ, কুরআন ও আমল কম্প্যানিয়ন",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#EEF3F0",
-  "theme_color": "#0E5A45",
+  "background_color": "#F5EFE2",
+  "theme_color": "#1A2340",
   "icons": [
     {
-      "src": "/audio/icon-192.png",
+      "src": "/icons/icon-192.png",
       "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ]

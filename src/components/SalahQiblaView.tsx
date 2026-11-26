@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { invoke } from '@tauri-apps/api/core';
 import { CalendarDays, CheckCircle2, ChevronLeft, ChevronRight, Clock, Compass, History, MapPin, Minus, Plus } from 'lucide-react';
 import { PrayerDay, PrayerName, PrayerStatus, PrayerTimes } from './DashboardView';
+import { getLocalDateKey } from '../lib/date';
 import {
   AsrMadhab,
   CalculationMethod,
@@ -62,7 +63,7 @@ export default function SalahQiblaView({
   onCyclePrayer,
   onNotify,
 }: SalahQiblaViewProps) {
-  const todayKey = new Date().toISOString().split('T')[0];
+  const todayKey = getLocalDateKey();
   const todayPrayers: PrayerDay = prayers[todayKey] || {
     fajr: 'pending',
     dhuhr: 'pending',
@@ -122,7 +123,7 @@ export default function SalahQiblaView({
     for (let i = 111; i >= 0; i--) {
       const d = new Date(today);
       d.setDate(today.getDate() - i);
-      const key = d.toISOString().split('T')[0];
+      const key = getLocalDateKey(d);
       const day = prayers[key];
       const count = day ? PRAYER_LABELS.filter((p) => day[p.key] === 'done').length : 0;
       days.push({ date: key, count });
@@ -166,7 +167,7 @@ export default function SalahQiblaView({
     const month = calCursor.getMonth();
     const firstDow = new Date(year, month, 1).getDay(); // 0=Sun
     const daysInMonth = new Date(year, month + 1, 0).getDate();
-    const todayStr = new Date().toISOString().split('T')[0];
+    const todayStr = getLocalDateKey();
 
     const cells: ({
       date: Date;
