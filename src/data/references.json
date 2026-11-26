@@ -1,0 +1,5911 @@
+{
+ "generated_by": "scripts/check_references.py",
+ "datasets": [
+  "fawazahmed0/hadith-api (sunnah.com-derived Arabic text, numbering and grades)",
+  "fawazahmed0/quran-api (Uthmani text)"
+ ],
+ "disclaimer": "স্বয়ংক্রিয় মিল-পরীক্ষা শুধু সহায়ক। এটি আলেমের তাহকীক নয়; চূড়ান্ত সিদ্ধান্ত রিভিউয়ারের।",
+ "entries": {
+  "istighfar-sayyidul": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6306",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6306,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وسلم سَيِّدُ الاِسْتِغْفَارِ أَنْ تَقُولَ اللَّهُمَّ أَنْتَ رَبِّي، لاَ إِلَهَ إِلاَّ أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَىَّ وَأَبُوءُ لَكَ بِذَنْبِي، فَاغْفِرْ لِي، فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ قَالَ وَمَنْ قَالَهَا مِنَ النَّهَارِ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-ibrahimi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 3370",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 3370,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عَلَّمَنَا كَيْفَ نُسَلِّمُ‏.‏ قَالَ قُولُوا اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ، اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ، وَعَلَى آلِ مُحَمَّدٍ، كَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ، وَعَلَى آلِ إِبْرَاهِيمَ، إِنَّكَ حَمِيدٌ مَجِيدٌ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 406",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 406,
+     "check": {
+      "status": "partial",
+      "score": 0.88,
+      "excerpt": "… فَكَيْفَ نُصَلِّي عَلَيْكَ قَالَ قُولُوا اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ اللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ إِنَّكَ حَمِيدٌ مَجِيدٌ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 408",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 408,
+     "check": {
+      "status": "mismatch",
+      "score": 0.03,
+      "excerpt": "… عليه وسلم قَالَ مَنْ صَلَّى عَلَىَّ وَاحِدَةً صَلَّى اللَّهُ عَلَيْهِ عَشْرًا",
+      "suggested": {
+       "number": 406,
+       "score": 0.88
+      }
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-kabira": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1517",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1517,
+     "check": {
+      "status": "match",
+      "score": 0.92,
+      "excerpt": "… عليه وسلم يَقُولُ مَنْ قَالَ أَسْتَغْفِرُ اللَّهَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَىُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ غُفِرَ لَهُ وَإِنْ كَانَ فَرَّ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3577",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3577,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم يَقُولُ مَنْ قَالَ أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَىَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ غُفِرَ لَهُ وَإِنْ كَانَ فَرَّ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-jumuah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1047",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1047,
+     "check": {
+      "status": "mismatch",
+      "score": 0.4,
+      "excerpt": "… عَبْدِ اللَّهِ، حَدَّثَنَا حُسَيْنُ بْنُ عَلِيٍّ، عَنْ عَبْدِ الرَّحْمَنِ بْنِ يَزِيدَ بْنِ جَابِرٍ، عَنْ أَبِي الأَشْعَثِ الصَّنْعَانِيِّ، عَنْ أَوْسِ بْنِ أَوْسٍ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم إِنَّ مِنْ أَفْضَلِ أَيَّامِكُمْ يَوْمَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-anxiety-debt": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6369",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6369,
+     "check": {
+      "status": "match",
+      "score": 0.93,
+      "excerpt": "… صلى الله عليه وسلم يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1555",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1555,
+     "check": {
+      "status": "partial",
+      "score": 0.73,
+      "excerpt": "… قُلْ إِذَا أَصْبَحْتَ وَإِذَا أَمْسَيْتَ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوذُ بِكَ مِنَ الْجُبْنِ وَالْبُخْلِ وَأَعُوذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ قَالَ فَفَعَلْتُ ذَلِكَ فَأَذْهَبَ اللَّهُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Daif"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-yunus": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আম্বিয়া: ৮৭",
+     "surah": 21,
+     "surah_name_bn": "আল-আম্বিয়া",
+     "ayah_from": 87,
+     "ayah_to": 87,
+     "check": {
+      "status": "partial",
+      "score": 0.78,
+      "excerpt": "… عَلَیۡهِ فَنَادَىٰ فِی ٱلظُّلُمَـٰتِ أَن لَّاۤ إِلَـٰهَ إِلَّاۤ أَنتَ سُبۡحَـٰنَكَ إِنِّی كُنتُ مِنَ ٱلظَّـٰلِمِینَ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3505",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3505,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… دَعَا وَهُوَ فِي بَطْنِ الْحُوتِ لاَ إِلَهَ إِلاَّ أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ فَإِنَّهُ لَمْ يَدْعُ بِهَا رَجُلٌ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-hasbunallah": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আলে ইমরান: ১৭৩",
+     "surah": 3,
+     "surah_name_bn": "আলে ইমরান",
+     "ayah_from": 173,
+     "ayah_to": 173,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… لَكُمۡ فَٱخۡشَوۡهُمۡ فَزَادَهُمۡ إِیمَـٰنࣰا وَقَالُوا۟ حَسۡبُنَا ٱللَّهُ وَنِعۡمَ ٱلۡوَكِیلُ",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 4563",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 4563,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَبِي الضُّحَى، عَنِ ابْنِ عَبَّاسٍ، ‏{‏حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ‏}‏ قَالَهَا إِبْرَاهِيمُ عَلَيْهِ السَّلاَمُ حِينَ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-halal-rizq": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3563",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3563,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَدَّاهُ اللَّهُ عَنْكَ قَالَ قُلِ اللَّهُمَّ اكْفِنِي بِحَلاَلِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ قَالَ أَبُو عِيسَى هَذَا حَدِيثٌ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rabbana-atina": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-বাকারা: ২০১",
+     "surah": 2,
+     "surah_name_bn": "আল-বাকারা",
+     "ayah_from": 201,
+     "ayah_to": 201,
+     "check": {
+      "status": "partial",
+      "score": 0.82,
+      "excerpt": "وَمِنۡهُم مَّن یَقُولُ رَبَّنَاۤ ءَاتِنَا فِی ٱلدُّنۡیَا حَسَنَةࣰ وَفِی ٱلۡءَاخِرَةِ حَسَنَةࣰ وَقِنَا عَذَابَ ٱلنَّارِ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6389",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6389,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… صلى الله عليه وسلم اللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-steadfast-heart": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3522",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3522,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عِنْدَكِ قَالَتْ كَانَ أَكْثَرُ دُعَائِهِ يَا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبِي عَلَى دِينِكَ قَالَتْ قُلْتُ يَا رَسُولَ اللَّهِ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-parents": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা বনী ইসরাঈল: ২৪",
+     "surah": 17,
+     "surah_name_bn": "বনী ইসরাঈল",
+     "ayah_from": 24,
+     "ayah_to": 24,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… جَنَاحَ ٱلذُّلِّ مِنَ ٱلرَّحۡمَةِ وَقُل رَّبِّ ٱرۡحَمۡهُمَا كَمَا رَبَّیَانِی صَغِیرࣰا"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-morning-protection": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5088",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5088,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم يَقُولُ مَنْ قَالَ بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَىْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ ثَلاَثَ مَرَّاتٍ لَمْ تُصِبْهُ فَجْأَةُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3388",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3388,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كُلِّ يَوْمٍ وَمَسَاءِ كُلِّ لَيْلَةٍ بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ ثَلاَثَ مَرَّاتٍ فَيَضُرُّهُ شَيْءٌ وَكَانَ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-tashahhud-salam": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 831",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 831,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فَلْيَقُلِ التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6265",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6265,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الْقُرْآنِ التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-ahzab-56": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আহযাব: ৫৬",
+     "surah": 33,
+     "surah_name_bn": "আল-আহযাব",
+     "ayah_from": 56,
+     "ayah_to": 56,
+     "check": {
+      "status": "mismatch",
+      "score": 0.5,
+      "excerpt": "إِنَّ ٱللَّهَ وَمَلَـٰۤئِكَتَهُۥ یُصَلُّونَ عَلَى ٱلنَّبِیِّۚ یَـٰۤأَیُّهَا ٱلَّذِینَ ءَامَنُوا۟ صَلُّوا۟ عَلَیۡهِ وَسَلِّمُوا۟ تَسۡلِیمًا",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3546",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3546,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… طَالِبٍ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم الْبَخِيلُ الَّذِي مَنْ ذُكِرْتُ عِنْدَهُ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ],
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-ummi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 981",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 981,
+     "check": {
+      "status": "partial",
+      "score": 0.78,
+      "excerpt": "… عَمْرٍو، بِهَذَا الْخَبَرِ قَالَ قُولُوا اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ النَّبِيِّ الأُمِّيِّ وَعَلَى آلِ مُحَمَّدٍ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "istighfar-majlis": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 4858",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 4858,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "حَدَّثَنَا أَحْمَدُ بْنُ صَالِحٍ، حَدَّثَنَا …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ],
+      "suggested": {
+       "number": 4859,
+       "score": 1.0
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3433",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3433,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَنْ يَقُومَ مِنْ مَجْلِسِهِ ذَلِكَ سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ أَنْتَ أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ إِلاَّ غُفِرَ لَهُ مَا كَانَ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-adam": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আ'রাফ: ২৩",
+     "surah": 7,
+     "surah_name_bn": "আল-আ'রাফ",
+     "ayah_from": 23,
+     "ayah_to": 23,
+     "check": {
+      "status": "match",
+      "score": 0.91,
+      "excerpt": "قَالَا رَبَّنَا ظَلَمۡنَاۤ أَنفُسَنَا وَإِن لَّمۡ تَغۡفِرۡ لَنَا وَتَرۡحَمۡنَا لَنَكُونَنَّ مِنَ ٱلۡخَـٰسِرِینَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-after-salah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 591",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 591,
+     "check": {
+      "status": "partial",
+      "score": 0.85,
+      "excerpt": "… وسلم إِذَا انْصَرَفَ مِنْ صَلاَتِهِ اسْتَغْفَرَ ثَلاَثًا وَقَالَ اللَّهُمَّ أَنْتَ السَّلاَمُ وَمِنْكَ السَّلاَمُ تَبَارَكْتَ ذَا الْجَلاَلِ وَالإِكْرَامِ قَالَ الْوَلِيدُ فَقُلْتُ لِلأَوْزَاعِيِّ كَيْفَ …"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "istighfar-nuh": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা নূহ: ২৮",
+     "surah": 71,
+     "surah_name_bn": "নূহ",
+     "ayah_from": 28,
+     "ayah_to": 28,
+     "check": {
+      "status": "partial",
+      "score": 0.8,
+      "excerpt": "رَّبِّ ٱغۡفِرۡ لِی وَلِوَ ٰلِدَیَّ وَلِمَن دَخَلَ بَیۡتِیَ مُؤۡمِنࣰا وَلِلۡمُؤۡمِنِینَ وَٱلۡمُؤۡمِنَـٰتِۖ وَلَا تَزِدِ ٱلظَّـٰلِمِینَ إِلَّا …"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-ilm-rizq-amal": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 925",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 925,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا صَلَّى الصُّبْحَ حِينَ يُسَلِّمُ اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا، وَرِزْقًا طَيِّبًا، وَعَمَلاً مُتَقَبَّلاً",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-health-afiyat": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5090",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5090,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِنِّي أَسْمَعُكَ تَدْعُو كُلَّ غَدَاةٍ اللَّهُمَّ عَافِنِي فِي بَدَنِي اللَّهُمَّ عَافِنِي فِي سَمْعِي اللَّهُمَّ عَافِنِي فِي بَصَرِي لاَ إِلَهَ إِلاَّ أَنْتَ تُعِيدُهَا ثَلاَثًا حِينَ تُصْبِحُ وَثَلاَثًا …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-qabr-azab": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 588",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 588,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فَلْيَسْتَعِذْ بِاللَّهِ مِنْ أَرْبَعٍ يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ جَهَنَّمَ وَمِنْ عَذَابِ الْقَبْرِ وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ وَمِنْ شَرِّ فِتْنَةِ الْمَسِيحِ الدَّجَّالِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-muadh-ibadah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1522",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1522,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فِي دُبُرِ كُلِّ صَلاَةٍ تَقُولُ اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ وَأَوْصَى بِذَلِكَ مُعَاذٌ الصُّنَابِحِيَّ وَأَوْصَى …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে নাসায়ী: 1303",
+     "book_key": "nasai",
+     "book_bn": "সুনানে নাসায়ী",
+     "book_en": "Sunan an-Nasa'i",
+     "number": 1303,
+     "check": {
+      "status": "partial",
+      "score": 0.86,
+      "excerpt": "… تَقُولَ فِي كُلِّ صَلاَةٍ رَبِّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
+      "grades": [
+       {
+        "name": "Abu Ghuddah",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-sleep-before": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6324",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6324,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا أَرَادَ أَنْ يَنَامَ قَالَ بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا وَإِذَا اسْتَيْقَظَ مِنْ مَنَامِهِ قَالَ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-wake-up": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6312",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6312,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَمُوتُ وَأَحْيَا وَإِذَا قَامَ قَالَ الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ تُنْشِرُهَا: تُخْرِجُهَا"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-enter-masjid": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 713",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 713,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا دَخَلَ أَحَدُكُمُ الْمَسْجِدَ فَلْيَقُلِ اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ وَإِذَا خَرَجَ فَلْيَقُلِ اللَّهُمَّ إِنِّي …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-exit-masjid": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 713",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 713,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَبْوَابَ رَحْمَتِكَ وَإِذَا خَرَجَ فَلْيَقُلِ اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ قَالَ مُسْلِمٌ سَمِعْتُ يَحْيَى بْنَ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-leave-home": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5095",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5095,
+     "check": {
+      "status": "match",
+      "score": 0.91,
+      "excerpt": "… خَرَجَ الرَّجُلُ مِنْ بَيْتِهِ فَقَالَ بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ قَالَ يُقَالُ حِينَئِذٍ هُدِيتَ وَكُفِيتَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3426",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3426,
+     "check": {
+      "status": "match",
+      "score": 0.91,
+      "excerpt": "… يَعْنِي إِذَا خَرَجَ مِنْ بَيْتِهِ بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ يُقَالُ لَهُ كُفِيتَ وَوُقِيتَ وَتَنَحَّى …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-travel": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আয-যুখরুফ: ১৩-১৪",
+     "surah": 43,
+     "surah_name_bn": "আয-যুখরুফ",
+     "ayah_from": 13,
+     "ayah_to": 14,
+     "check": {
+      "status": "match",
+      "score": 0.92,
+      "excerpt": "… إِذَا ٱسۡتَوَیۡتُمۡ عَلَیۡهِ وَتَقُولُوا۟ سُبۡحَـٰنَ ٱلَّذِی سَخَّرَ لَنَا هَـٰذَا وَمَا كُنَّا لَهُۥ مُقۡرِنِینَ وَإِنَّاۤ إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 1342",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 1342,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… سَفَرٍ كَبَّرَ ثَلاَثًا ثُمَّ قَالَ سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-protect-shirk": {
+   "refs": [
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 19606",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 19606,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "আল-আদাবুল মুফরাদ: 716",
+     "book_bn": "আল-আদাবুল মুফরাদ",
+     "book_en": "Al-Adab al-Mufrad",
+     "number": 716,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "unchecked"
+  },
+  "dua-ayat-ul-kursi": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-বাকারা: ২৫৫",
+     "surah": 2,
+     "surah_name_bn": "আল-বাকারা",
+     "ayah_from": 255,
+     "ayah_to": 255,
+     "check": {
+      "status": "match",
+      "score": 0.94,
+      "excerpt": "ٱللَّهُ لَاۤ إِلَـٰهَ إِلَّا هُوَ ٱلۡحَیُّ ٱلۡقَیُّومُۚ لَا تَأۡخُذُهُۥ سِنَةࣱ وَلَا نَوۡمࣱۚ لَّهُۥ مَا فِی ٱلسَّمَـٰوَ ٰتِ وَمَا فِی ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِی یَشۡفَعُ عِندَهُۥۤ إِلَّا بِإِذۡنِهِۦۚ یَعۡلَمُ مَا بَیۡنَ أَیۡدِیهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا یُحِیطُونَ بِشَیۡءࣲ مِّنۡ عِلۡمِهِۦۤ إِلَّا بِمَا شَاۤءَۚ وَسِعَ كُرۡسِیُّهُ ٱلسَّمَـٰوَ ٰتِ وَٱلۡأَرۡضَۖ وَلَا یَءُودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِیُّ ٱلۡعَظِیمُ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 2311",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 2311,
+     "check": {
+      "status": "mismatch",
+      "score": 0.2,
+      "excerpt": "… إِلَى فِرَاشِكَ فَاقْرَأْ آيَةَ الْكُرْسِيِّ ‏{‏اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ الْحَىُّ الْقَيُّومُ‏}‏ حَتَّى تَخْتِمَ الآيَةَ، فَإِنَّكَ لَنْ يَزَالَ عَلَيْكَ مِنَ اللَّهِ حَافِظٌ وَلاَ يَقْرَبَنَّكَ شَيْطَانٌ حَتَّى تُصْبِحَ‏.‏ فَخَلَّيْتُ سَبِيلَهُ فَأَصْبَحْتُ، فَقَالَ لِي رَسُولُ اللَّهِ صلى الله عليه وسلم مَا فَعَلَ أَسِيرُكَ الْبَارِحَةَ قُلْتُ يَا رَسُولَ اللَّهِ زَعَمَ أَنَّهُ يُعَلِّمُنِي كَلِمَاتٍ، يَنْفَعُنِي اللَّهُ بِهَا، فَخَلَّيْتُ سَبِيلَهُ‏.‏ قَالَ مَا هِيَ قُلْتُ قَالَ …"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "নাসায়ী কুবরা: 9928",
+     "book_bn": "নাসায়ী কুবরা",
+     "book_en": "Sunan al-Kubra (Nasai)",
+     "number": 9928,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-ikhlas-falaq-nas": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5082",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5082,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… رَسُولَ اللَّهِ مَا أَقُولُ قَالَ قُلْ هُوَ اللَّهُ أَحَدٌ وَالْمُعَوِّذَتَيْنِ حِينَ تُمْسِي وَحِينَ تُصْبِحُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ],
+      "suggested": {
+       "number": 5056,
+       "score": 1.0
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3575",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3575,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… قُلْ قُلْتُ مَا أَقُولُ قَالَ قُلْ هوَ اللَّهُ أَحَدٌ وَالْمُعَوِّذَتَيْنِ حِينَ تُمْسِي وَتُصْبِحُ ثَلاَثَ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ],
+      "suggested": {
+       "number": 3402,
+       "score": 1.0
+      }
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-raditu-billahi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5072",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5072,
+     "check": {
+      "status": "mismatch",
+      "score": 0.55,
+      "excerpt": "… إِذَا أَصْبَحَ وَإِذَا أَمْسَى رَضِينَا بِاللَّهِ رَبًّا وَبِالإِسْلاَمِ دِينًا وَبِمُحَمَّدٍ رَسُولاً إِلاَّ كَانَ حَقًّا عَلَى اللَّهِ أَنْ يُرْضِيَهُ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3389",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3389,
+     "check": {
+      "status": "partial",
+      "score": 0.64,
+      "excerpt": "… وسلم مَنْ قَالَ حِينَ يُمْسِي رَضِيتُ بِاللَّهِ رَبًّا وَبِالإِسْلاَمِ دِينًا وَبِمُحَمَّدٍ نَبِيًّا كَانَ حَقًّا عَلَى اللَّهِ أَنْ يُرْضِيَهُ قَالَ أَبُو عِيسَى …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Daif"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-hasbiyallahu": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আত-তাওবা: ১২৯",
+     "surah": 9,
+     "surah_name_bn": "আত-তাওবা",
+     "ayah_from": 129,
+     "ayah_to": 129,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "فَإِن تَوَلَّوۡا۟ فَقُلۡ حَسۡبِیَ ٱللَّهُ لَاۤ إِلَـٰهَ إِلَّا هُوَۖ عَلَیۡهِ تَوَكَّلۡتُۖ وَهُوَ رَبُّ ٱلۡعَرۡشِ ٱلۡعَظِیمِ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5081",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5081,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَ إِذَا أَصْبَحَ وَإِذَا أَمْسَى حَسْبِيَ اللَّهُ لاَ إِلَهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ سَبْعَ مَرَّاتٍ كَفَاهُ اللَّهُ مَا …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Mawdu"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Mawdu"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-ya-hayyu-ya-qayyum": {
+   "refs": [
+    {
+     "kind": "other",
+     "raw": "সুনানে নাসায়ী কুবরা: 10330",
+     "book_bn": "সুনানে নাসায়ী কুবরা",
+     "book_en": "Sunan al-Kubra (Nasai)",
+     "number": 10330,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "আল-মুসতাদরাক: 200",
+     "book_bn": "আল-মুসতাদরাক",
+     "book_en": "Al-Mustadrak (Hakim)",
+     "number": 200,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "unchecked"
+  },
+  "dua-bismillahi-alladhi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5088",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5088,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم يَقُولُ مَنْ قَالَ بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَىْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ ثَلاَثَ مَرَّاتٍ لَمْ تُصِبْهُ فَجْأَةُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3388",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3388,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كُلِّ يَوْمٍ وَمَسَاءِ كُلِّ لَيْلَةٍ بِسْمِ اللَّهِ الَّذِي لاَ يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الأَرْضِ وَلاَ فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ ثَلاَثَ مَرَّاتٍ فَيَضُرُّهُ شَيْءٌ وَكَانَ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-audhu-bikalimatillah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2708",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2708,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَنْ نَزَلَ مَنْزِلاً ثُمَّ قَالَ أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ لَمْ يَضُرُّهُ شَىْءٌ حَتَّى يَرْتَحِلَ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2709",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2709,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا نَزَلَ أَحَدُكُمْ مَنْزِلاً فَلْيَقُلْ أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ فَإِنَّهُ لاَ يَضُرُّهُ شَىْءٌ حَتَّى …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-afiyat-dunya-akhirah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5074",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5074,
+     "check": {
+      "status": "partial",
+      "score": 0.75,
+      "excerpt": "… أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي دِينِي وَدُنْيَاىَ وَأَهْلِي وَمَالِي اللَّهُمَّ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 3871",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 3871,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الدَّعَوَاتِ حِينَ يُمْسِي وَحِينَ يُصْبِحُ اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالآخِرَةِ اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-morning-thank": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5073",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5073,
+     "check": {
+      "status": "partial",
+      "score": 0.79,
+      "excerpt": "… قَالَ مَنْ قَالَ حِينَ يُصْبِحُ اللَّهُمَّ مَا أَصْبَحَ بِي مِنْ نِعْمَةٍ فَمِنْكَ وَحْدَكَ لاَ شَرِيكَ لَكَ فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ فَقَدْ أَدَّى شُكْرَ يَوْمِهِ وَمَنْ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Daif"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-evening-thank": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2723",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2723,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم إِذَا أَمْسَى قَالَ أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ وَالْحَمْدُ لِلَّهِ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ قَالَ الْحَسَنُ فَحَدَّثَنِي الزُّبَيْدُ أَنَّهُ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-enter-home": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5096",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5096,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَسْأَلُكَ خَيْرَ الْمَوْلِجِ وَخَيْرَ الْمَخْرَجِ بِسْمِ اللَّهِ وَلَجْنَا وَبِسْمِ اللَّهِ خَرَجْنَا وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا ثُمَّ لْيُسَلِّمْ عَلَى أَهْلِهِ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2018",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2018,
+     "check": {
+      "status": "mismatch",
+      "score": 0.3,
+      "excerpt": "… الزُّبَيْرِ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ، أَنَّهُ سَمِعَ النَّبِيَّ صلى الله عليه وسلم يَقُولُ إِذَا دَخَلَ الرَّجُلُ بَيْتَهُ فَذَكَرَ اللَّهَ عِنْدَ دُخُولِهِ وَعِنْدَ طَعَامِهِ قَالَ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-wear-clothes": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 4023",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 4023,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… تَأَخَّرَ وَمَنْ لَبِسَ ثَوْبًا فَقَالَ الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا الثَّوْبَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3458",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3458,
+     "check": {
+      "status": "partial",
+      "score": 0.85,
+      "excerpt": "… وسلم مَنْ أَكَلَ طَعَامًا فَقَالَ الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-new-clothes": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 4020",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 4020,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَمِيصًا أَوْ عِمَامَةً ثُمَّ يَقُولُ اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ كَسَوْتَنِيهِ أَسْأَلُكَ مِنْ خَيْرِهِ وَخَيْرِ مَا صُنِعَ لَهُ وَأَعُوذُ بِكَ مِنْ شَرِّهِ وَشَرِّ مَا صُنِعَ لَهُ قَالَ أَبُو نَضْرَةَ فَكَانَ أَصْحَابُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 1767",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 1767,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-toilet-enter": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 142",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 142,
+     "check": {
+      "status": "partial",
+      "score": 0.89,
+      "excerpt": "… أَنَسًا، يَقُولُ كَانَ النَّبِيُّ صلى الله عليه وسلم إِذَا دَخَلَ الْخَلاَءَ قَالَ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ تَابَعَهُ ابْنُ عَرْعَرَةَ عَنْ شُعْبَةَ‏.‏ …",
+      "suggested": {
+       "number": 6322,
+       "score": 0.89
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 375",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 375,
+     "check": {
+      "status": "partial",
+      "score": 0.89,
+      "excerpt": "… فِي حَدِيثِ حَمَّادٍ كَانَ رَسُولُ اللَّهِ صلى الله عليه وسلم إِذَا دَخَلَ الْخَلاَءَ وَفِي حَدِيثِ هُشَيْمٍ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم كَانَ إِذَا دَخَلَ الْكَنِيفَ قَالَ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبْثِ وَالْخَبَائِثِ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-toilet-exit": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 30",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 30,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا خَرَجَ مِنَ الْغَائِطِ قَالَ غُفْرَانَكَ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ],
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 7",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 7,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا خَرَجَ مِنَ الْخَلاَءِ قَالَ غُفْرَانَكَ قَالَ أَبُو عِيسَى هَذَا حَدِيثٌ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ],
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-wudu-before": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 101",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 101,
+     "check": {
+      "status": "mismatch",
+      "score": 0.5,
+      "excerpt": "… أَبِي هُرَيْرَةَ، قَالَ قَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم لاَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ],
+      "suggested": {
+       "number": 784,
+       "score": 1.0
+      },
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 399",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 399,
+     "check": {
+      "status": "mismatch",
+      "score": 0.5,
+      "excerpt": "… بْنُ مُوسَى بْنِ أَبِي عَبْدِ اللَّهِ، عَنْ يَعْقُوبَ بْنِ سَلَمَةَ اللَّيْثِيِّ، …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ],
+      "suggested": {
+       "number": 297,
+       "score": 1.0
+      },
+      "weak": true
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-wudu-after": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 234",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 234,
+     "check": {
+      "status": "partial",
+      "score": 0.68,
+      "excerpt": "… أَنَّهُ قَالَ مَنْ تَوَضَّأَ فَقَالَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 55",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 55,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… تَوَضَّأَ فَأَحْسَنَ الْوُضُوءَ ثُمَّ قَالَ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ اللَّهُمَّ اجْعَلْنِي مِنَ التَّوَّابِينَ وَاجْعَلْنِي مِنَ الْمُتَطَهِّرِينَ فُتِحَتْ لَهُ ثَمَانِيَةُ أَبْوَابِ الْجَنَّةِ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-adhan-after": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 614",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 614,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَنْ قَالَ حِينَ يَسْمَعُ النِّدَاءَ اللَّهُمَّ رَبَّ هَذِهِ الدَّعْوَةِ التَّامَّةِ وَالصَّلاَةِ الْقَائِمَةِ آتِ مُحَمَّدًا الْوَسِيلَةَ وَالْفَضِيلَةَ وَابْعَثْهُ مَقَامًا مَحْمُودًا الَّذِي وَعَدْتَهُ، حَلَّتْ لَهُ شَفَاعَتِي يَوْمَ الْقِيَامَةِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-istiftah-sana": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 399",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 399,
+     "check": {
+      "status": "match",
+      "score": 0.9,
+      "excerpt": "… كَانَ يَجْهَرُ بِهَؤُلاَءِ الْكَلِمَاتِ يَقُولُ سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ تَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلاَ إِلَهَ غَيْرُكَ وَعَنْ قَتَادَةَ أَنَّهُ كَتَبَ إِلَيْهِ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 776",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 776,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وسلم إِذَا اسْتَفْتَحَ الصَّلاَةَ قَالَ سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ وَلاَ إِلَهَ غَيْرُكَ قَالَ أَبُو دَاوُدَ وَهَذَا الْحَدِيثُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-istiftah-wajjahtu": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 744",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 744,
+     "check": {
+      "status": "match",
+      "score": 0.95,
+      "excerpt": "… وَالْقِرَاءَةِ مَا تَقُولُ قَالَ أَقُولُ اللَّهُمَّ بَاعِدْ بَيْنِي وَبَيْنَ خَطَايَاىَ كَمَا بَاعَدْتَ بَيْنَ الْمَشْرِقِ وَالْمَغْرِبِ، اللَّهُمَّ نَقِّنِي مِنَ الْخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الأَبْيَضُ مِنَ الدَّنَسِ، اللَّهُمَّ اغْسِلْ خَطَايَاىَ بِالْمَاءِ وَالثَّلْجِ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 598",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 598,
+     "check": {
+      "status": "mismatch",
+      "score": 0,
+      "reason": "এই নম্বরে ডেটাসেটে হাদীস নেই (নম্বরিং পদ্ধতি ভিন্ন হতে পারে)"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-ruku": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 772",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 772,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… تَعَوَّذَ ثُمَّ رَكَعَ فَجَعَلَ يَقُولُ سُبْحَانَ رَبِّيَ الْعَظِيمِ فَكَانَ رُكُوعُهُ نَحْوًا مِنْ قِيَامِهِ …",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 869",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 869,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… لَمَّا نَزَلَتْ فَسَبِّحْ بِاسْمِ رَبِّكَ الْعَظِيمِ قَالَ رَسُولُ اللَّهِ صلى الله …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ],
+      "suggested": {
+       "number": 870,
+       "score": 1.0
+      },
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-qawmah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 799",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 799,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… لِمَنْ حَمِدَهُ قَالَ رَجُلٌ وَرَاءَهُ رَبَّنَا وَلَكَ الْحَمْدُ، حَمْدًا كَثِيرًا طَيِّبًا مُبَارَكًا فِيهِ، فَلَمَّا انْصَرَفَ قَالَ مَنِ الْمُتَكَلِّمُ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-sujood": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 482",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 482,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "وَحَدَّثَنَا هَارُونُ بْنُ مَعْرُوفٍ، وَعَمْرُو …",
+      "suggested": {
+       "number": 772,
+       "score": 1.0
+      },
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 772",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 772,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مِمَّا رَكَعَ ثُمَّ سَجَدَ فَقَالَ سُبْحَانَ رَبِّيَ الأَعْلَى فَكَانَ سُجُودُهُ قَرِيبًا مِنْ قِيَامِهِ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-between-sujood": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 874",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 874,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… نَحْوًا مِنْ سُجُودِهِ وَكَانَ يَقُولُ رَبِّ اغْفِرْ لِي رَبِّ اغْفِرْ لِي فَصَلَّى أَرْبَعَ رَكَعَاتٍ فَقَرَأَ فِيهِنَّ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে নাসায়ী: 1145",
+     "book_key": "nasai",
+     "book_bn": "সুনানে নাসায়ী",
+     "book_en": "Sunan an-Nasa'i",
+     "number": 1145,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الأَعْلَى وَكَانَ يَقُولُ بَيْنَ السَّجْدَتَيْنِ رَبِّ اغْفِرْ لِي رَبِّ اغْفِرْ لِي",
+      "grades": [
+       {
+        "name": "Abu Ghuddah",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-tashahhud": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 831",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 831,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… السَّلاَمُ، فَإِذَا صَلَّى أَحَدُكُمْ فَلْيَقُلِ التَّحِيَّاتُ لِلَّهِ، وَالصَّلَوَاتُ وَالطَّيِّبَاتُ، السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ، السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ‏.‏ فَإِنَّكُمْ إِذَا قُلْتُمُوهَا أَصَابَتْ كُلَّ عَبْدٍ لِلَّهِ صَالِحٍ فِي السَّمَاءِ وَالأَرْضِ، أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 402",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 402,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَعَدَ أَحَدُكُمْ فِي الصَّلاَةِ فَلْيَقُلِ التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ السَّلاَمُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ السَّلاَمُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ فَإِذَا قَالَهَا أَصَابَتْ كُلَّ عَبْدٍ لِلَّهِ صَالِحٍ فِي السَّمَاءِ وَالأَرْضِ أَشْهَدُ أَنْ لاَ إِلَهَ إِلاَّ اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ ثُمَّ يَتَخَيَّرُ مِنَ الْمَسْأَلَةِ مَا …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-before-salam": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 834",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 834,
+     "check": {
+      "status": "match",
+      "score": 0.95,
+      "excerpt": "… بِهِ فِي صَلاَتِي‏.‏ قَالَ قُلِ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا ��َلاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2705",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2705,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… بِهِ فِي صَلاَتِي قَالَ قُلِ اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَبِيرًا وَقَالَ قُتَيْبَةُ كَثِيرًا وَلاَ يَغْفِرُ الذُّنُوبَ إِلاَّ أَنْتَ فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَارْحَمْنِي إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-qunoot-witr": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1425",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1425,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… ابْنُ جَوَّاسٍ فِي قُنُوتِ الْوِتْرِ اللَّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ وَعَافِنِي فِيمَنْ عَافَيْتَ وَتَوَلَّنِي فِيمَنْ تَوَلَّيْتَ وَبَارِكْ لِي فِيمَا أَعْطَيْتَ وَقِنِي شَرَّ مَا قَضَيْتَ إِنَّكَ تَقْضِي وَلاَ يُقْضَى عَلَيْكَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 464",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 464,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وسلم كَلِمَاتٍ أَقُولُهُنَّ فِي الْوِتْرِ اللَّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ وَعَافِنِي فِيمَنْ عَافَيْتَ وَتَوَلَّنِي فِيمَنْ تَوَلَّيْتَ وَبَارِكْ لِي فِيمَا أَعْطَيْتَ وَقِنِي شَرَّ مَا قَضَيْتَ فَإِنَّكَ تَقْضِي وَلاَ يُقْضَى عَلَيْكَ …",
+      "grades": [
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-tasbih-fatimah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 3705",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 3705,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… أَثَرِ الرَّحَا، فَأَتَى النَّبِيَّ صلى الله عليه وسلم سَبْىٌ، فَانْطَلَقَتْ فَلَمْ تَجِدْهُ، فَوَجَدَتْ عَائِشَةَ، فَأَخْبَرَتْهَا، فَلَمَّا جَاءَ النَّبِيُّ صلى الله عليه وسلم أَخْبَرَتْهُ عَائِشَةُ بِمَجِيءِ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 597",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 597,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… الْوَاسِطِيُّ، أَخْبَرَنَا خَالِدُ بْنُ عَبْدِ اللَّهِ، عَنْ سُهَيْلٍ، عَنْ أَبِي عُبَيْدٍ الْمَذْحِجِيِّ، قَالَ مُسْلِمٌ أَبُو عُبَيْدٍ مَوْلَى سُلَيْمَانَ بْنِ عَبْدِ الْمَلِكِ عَنْ عَطَاءِ بْنِ يَزِيدَ اللَّيْثِيِّ، عَنْ أَبِي هُرَيْرَةَ، عَنْ رَسُولِ اللَّهِ صلى الله عليه وسلم مَنْ سَبَّحَ اللَّهَ فِي دُبُرِ كُلِّ صَلاَةٍ ثَلاَثًا وَثَلاَثِينَ وَحَمِدَ اللَّهَ ثَلاَثًا وَثَلاَثِينَ وَكَبَّرَ اللَّهَ ثَلاَثًا وَثَلاَثِينَ فَتِلْكَ تِسْعَةٌ وَتِسْعُونَ وَقَالَ تَمَامَ الْمِائَةِ لاَ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2727",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2727,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… فِي يَدِهَا وَأَتَى النَّبِيَّ صلى الله عليه وسلم سَبْىٌ فَانْطَلَقَتْ فَلَمْ تَجِدْهُ وَلَقِيَتْ عَائِشَةَ فَأَخْبَرَتْهَا فَلَمَّا جَاءَ النَّبِيُّ صلى الله عليه وسلم أَخْبَرَتْهُ عَائِشَةُ بِمَجِيءِ …"
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-istikhara": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 1162",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 1162,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "حَدَّثَنَا عَلِيُّ بْنُ عَبْدِ اللَّهِ، …",
+      "suggested": {
+       "number": 1166,
+       "score": 1.0
+      }
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-rabbi-zidni-ilma": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা ত্বাহা: ১১৪",
+     "surah": 20,
+     "surah_name_bn": "ত্বাহা",
+     "ayah_from": 114,
+     "ayah_to": 114,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَن یُقۡضَىٰۤ إِلَیۡكَ وَحۡیُهُۥۖ وَقُل رَّبِّ زِدۡنِی عِلۡمࣰا",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-musa-expand-chest": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা ত্বাহা: ২৫-২৮",
+     "surah": 20,
+     "surah_name_bn": "ত্বাহা",
+     "ayah_from": 25,
+     "ayah_to": 28,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "قَالَ رَبِّ ٱشۡرَحۡ لِی صَدۡرِی وَیَسِّرۡ لِیۤ أَمۡرِی وَٱحۡلُلۡ عُقۡدَةࣰ مِّن لِّسَانِی یَفۡقَهُوا۟ قَوۡلِی"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-musa-khayr": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-কাসাস: ২৪",
+     "surah": 28,
+     "surah_name_bn": "আল-কাসাস",
+     "ayah_from": 24,
+     "ayah_to": 24,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… ثُمَّ تَوَلَّىٰۤ إِلَى ٱلظِّلِّ فَقَالَ رَبِّ إِنِّی لِمَاۤ أَنزَلۡتَ إِلَیَّ مِنۡ خَیۡرࣲ فَقِیرࣱ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-zakariya-offspring": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আম্বিয়া: ৮৯",
+     "surah": 21,
+     "surah_name_bn": "আল-আম্বিয়া",
+     "ayah_from": 89,
+     "ayah_to": 89,
+     "check": {
+      "status": "partial",
+      "score": 0.86,
+      "excerpt": "وَزَكَرِیَّاۤ إِذۡ نَادَىٰ رَبَّهُۥ رَبِّ لَا تَذَرۡنِی فَرۡدࣰا وَأَنتَ خَیۡرُ ٱلۡوَ ٰرِثِینَ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-rabbana-hablana": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-ফুরকান: ৭৪",
+     "surah": 25,
+     "surah_name_bn": "আল-ফুরকান",
+     "ayah_from": 74,
+     "ayah_to": 74,
+     "check": {
+      "status": "partial",
+      "score": 0.82,
+      "excerpt": "وَٱلَّذِینَ یَقُولُونَ رَبَّنَا هَبۡ لَنَا مِنۡ أَزۡوَ ٰجِنَا وَذُرِّیَّـٰتِنَا قُرَّةَ أَعۡیُنࣲ وَٱجۡعَلۡنَا لِلۡمُتَّقِینَ إِمَامًا"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-ibrahim-salah": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা ইবরাহীম: ৪০",
+     "surah": 14,
+     "surah_name_bn": "ইবরাহীম",
+     "ayah_from": 40,
+     "ayah_to": 40,
+     "check": {
+      "status": "partial",
+      "score": 0.89,
+      "excerpt": "رَبِّ ٱجۡعَلۡنِی مُقِیمَ ٱلصَّلَوٰةِ وَمِن ذُرِّیَّتِیۚ رَبَّنَا وَتَقَبَّلۡ دُعَاۤءِ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-before-eating": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 3767",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 3767,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… اللَّهِ تَعَالَى فِي أَوَّلِهِ فَلْيَقُلْ بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ],
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 1858",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 1858,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       }
+      ],
+      "suggested": {
+       "number": 244,
+       "score": 1.0
+      },
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-after-eating": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 4023",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 4023,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَنْ أَكَلَ طَعَامًا ثُمَّ قَالَ الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا الطَّعَامَ وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3458",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3458,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وسلم مَنْ أَكَلَ طَعَامًا فَقَالَ الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلاَ قُوَّةٍ غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-iftaar": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 2357",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 2357,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم إِذَا أَفْطَرَ قَالَ ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الأَجْرُ إِنْ شَاءَ اللَّهُ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-laylatul-qadr": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3513",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3513,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَا أَقُولُ فِيهَا قَالَ قُولِي اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي قَالَ هَذَا حَدِيثٌ حَسَنٌ صَحِيحٌ",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 3850",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 3850,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الْقَدْرِ مَا أَدْعُو قَالَ تَقُولِينَ اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-la-ilaha-illallah-azim": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6346",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6346,
+     "check": {
+      "status": "match",
+      "score": 0.96,
+      "excerpt": "… وسلم كَانَ يَقُولُ عِنْدَ الْكَرْبِ لاَ إِلَهَ إِلاَّ اللَّهُ الْعَظِيمُ الْحَلِيمُ، لاَ إِلَهَ إِلاَّ اللَّهُ رَبُّ الْعَرْشِ الْعَظِيمِ، لاَ إِلَهَ إِلاَّ اللَّهُ رَبُّ السَّمَوَاتِ، وَرَبُّ الأَرْضِ، وَرَبُّ الْعَرْشِ الْكَرِيمِ وَقَالَ وَهْبٌ حَدَّثَنَا شُعْبَةُ عَنْ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2730",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2730,
+     "check": {
+      "status": "match",
+      "score": 0.96,
+      "excerpt": "… وسلم كَانَ يَقُولُ عِنْدَ الْكَرْبِ لاَ إِلَهَ إِلاَّ اللَّهُ الْعَظِيمُ الْحَلِيمُ لاَ إِلَهَ إِلاَّ اللَّهُ رَبُّ الْعَرْشِ الْعَظِيمِ لاَ إِلَهَ إِلاَّ اللَّهُ رَبُّ السَّمَوَاتِ وَرَبُّ الأَرْضِ وَرَبُّ الْعَرْشِ الْكَرِيمِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rahmah-no-wink": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5090",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5090,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الله عليه وسلم دَعَوَاتُ الْمَكْرُوبِ اللَّهُمَّ رَحْمَتَكَ أَرْجُو فَلاَ تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ وَأَصْلِحْ لِي شَأْنِي كُلَّهُ لاَ إِلَهَ إِلاَّ أَنْتَ وَبَعْضُهُمْ يَزِيدُ عَلَى صَاحِبِهِ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 20430",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 20430,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-shifa-illness": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 5743",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 5743,
+     "check": {
+      "status": "partial",
+      "score": 0.8,
+      "excerpt": "… الْيُمْنَى وَيَقُولُ اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَاسَ، اشْفِهِ وَأَنْتَ الشَّافِي، لاَ شِفَاءَ إِلاَّ شِفَاؤُكَ، شِفَاءً لاَ يُغَادِرُ سَقَمًا قَالَ سُفْيَانُ حَدَّثْتُ بِهِ مَنْصُورًا …",
+      "suggested": {
+       "number": 5675,
+       "score": 1.0
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2191",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2191,
+     "check": {
+      "status": "partial",
+      "score": 0.87,
+      "excerpt": "… إِنْسَانٌ مَسَحَهُ بِيَمِينِهِ ثُمَّ قَالَ أَذْهِبِ الْبَاسَ رَبَّ النَّاسِ وَاشْفِ أَنْتَ الشَّافِي لاَ شِفَاءَ إِلاَّ شِفَاؤُكَ شِفَاءً لاَ يُغَادِرُ سَقَمًا فَلَمَّا مَرِضَ رَسُولُ اللَّهِ صلى …"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-shifa-pain": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2202",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2202,
+     "check": {
+      "status": "match",
+      "score": 0.9,
+      "excerpt": "… الثَّقَفِيِّ، أَنَّهُ شَكَا إِلَى رَسُولِ اللَّهِ صلى الله عليه وسلم وَجَعًا يَجِدُهُ فِي جَسَدِهِ مُنْذُ أَسْلَمَ فَقَالَ لَهُ رَسُولُ اللَّهِ صلى الله عليه وسلم ضَعْ يَدَكَ عَلَى الَّذِي تَأَلَّمَ مِنْ جَسَدِكَ وَقُلْ بِاسْمِ اللَّهِ ثَلاَثًا وَقُلْ سَبْعَ مَرَّاتٍ أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-shifa-ayyub": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আম্বিয়া: ৮৩",
+     "surah": 21,
+     "surah_name_bn": "আল-আম্বিয়া",
+     "ayah_from": 83,
+     "ayah_to": 83,
+     "check": {
+      "status": "partial",
+      "score": 0.83,
+      "excerpt": "وَأَیُّوبَ إِذۡ نَادَىٰ رَبَّهُۥۤ أَنِّی مَسَّنِیَ ٱلضُّرُّ وَأَنتَ أَرۡحَمُ ٱلرَّ ٰحِمِینَ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-visit-sick": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 3106",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 3106,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَجَلُهُ فَقَالَ عِنْدَهُ سَبْعَ مِرَارٍ أَسْأَلُ اللَّهَ الْعَظِيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفِيَكَ إِلاَّ عَافَاهُ اللَّهُ مِنْ ذَلِكَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 2083",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 2083,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… يَحْضُرْ أَجَلُهُ فَيَقُولُ سَبْعَ مَرَّاتٍ أَسْأَلُ اللَّهَ الْعَظِيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفِيَكَ إِلاَّ عُوفِيَ قَالَ أَبُو عِيسَى …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rain": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 1032",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 1032,
+     "check": {
+      "status": "partial",
+      "score": 0.67,
+      "excerpt": "… كَانَ إِذَا رَأَى الْمَطَرَ قَالَ صَيِّبًا نَافِعًا تَابَعَهُ الْقَاسِمُ بْنُ يَحْيَى عَنْ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-after-rain": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 846",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 846,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… بِي وَكَافِرٌ، فَأَمَّا مَنْ قَالَ مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ فَذَلِكَ مُؤْمِنٌ بِي وَكَافِرٌ بِالْكَوْكَبِ، …",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 71",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 71,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… بِي وَكَافِرٌ فَأَمَّا مَنْ قَالَ مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ فَذَلِكَ مُؤْمِنٌ بِي وَكَافِرٌ بِالْكَوْكَبِ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-wind": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 899",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 899,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وسلم إِذَا عَصَفَتِ الرِّيحُ قَالَ اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَهَا وَخَيْرَ مَا فِيهَا وَخَيْرَ مَا أُرْسِلَتْ بِهِ وَأَعُوذُ بِكَ مِنْ شَرِّهَا وَشَرِّ مَا فِيهَا وَشَرِّ مَا …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5097",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5097,
+     "check": {
+      "status": "mismatch",
+      "score": 0.38,
+      "excerpt": "… رَأَيْتُمُوهَا فَلاَ تَسُبُّوهَا وَسَلُوا اللَّهَ خَيْرَهَا وَاسْتَعِيذُوا بِاللَّهِ مِنْ شَرِّهَا",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ],
+      "suggested": {
+       "number": 2160,
+       "score": 1.0
+      }
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-thunder": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "মুয়াত্তা ইমাম মালেক: 3641",
+     "book_key": "malik",
+     "book_bn": "মুয়াত্তা ইমাম মালেক",
+     "book_en": "Muwatta Malik",
+     "number": 3641,
+     "check": {
+      "status": "mismatch",
+      "score": 0,
+      "reason": "এই নম্বরে ডেটাসেটে হাদীস নেই (নম্বরিং পদ্ধতি ভিন্ন হতে পারে)"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "আল-আদাবুল মুফরাদ: 723",
+     "book_bn": "আল-আদাবুল মুফরাদ",
+     "book_en": "Al-Adab al-Mufrad",
+     "number": 723,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-anger": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 3282",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 3282,
+     "check": {
+      "status": "partial",
+      "score": 0.8,
+      "excerpt": "… عَنْهُ مَا يَجِدُ، لَوْ قَالَ أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ‏.‏ ذَهَبَ عَنْهُ مَا يَجِدُ فَقَالُوا …",
+      "suggested": {
+       "number": 6115,
+       "score": 1.0
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2610",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2610,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَهَا لَذَهَبَ عَنْهُ الَّذِي يَجِدُ أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ فَقَالَ الرَّجُلُ وَهَلْ تَرَى بِي …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-difficulty-easy": {
+   "refs": [
+    {
+     "kind": "other",
+     "raw": "সহীহ ইবনে হিব্বান: 974",
+     "book_bn": "সহীহ ইবনে হিব্বান",
+     "book_en": "Sahih Ibn Hibban",
+     "number": 974,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "আল-আযকার (নববী)",
+     "book_en": "Al-Adhkar (Nawawi)",
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "unchecked"
+  },
+  "dua-loss-inna-lillahi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 918",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 918,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مُصِيبَةٌ فَيَقُولُ مَا أَمَرَهُ اللَّهُ إِنَّا لِلَّهِ وَإِنَّا إِلَيْهِ رَاجِعُونَ اللَّهُمَّ أْجُرْنِي فِي مُصِيبَتِي وَأَخْلِفْ لِي خَيْرًا مِنْهَا إِلاَّ أَخْلَفَ اللَّهُ لَهُ خَيْرًا …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-good-news": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 3803",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 3803,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِذَا رَأَى مَا يُحِبُّ قَالَ الْحَمْدُ لِلَّهِ الَّذِي بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ وَإِذَا رَأَى مَا يَكْرَهُ قَالَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-market-enter": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3428",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3428,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَ مَنْ دَخَلَ السُّوقَ فَقَالَ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكُ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ حَىٌّ لاَ يَمُوتُ بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ كَتَبَ اللَّهُ لَهُ أَلْفَ أَلْفِ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 2235",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 2235,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَنْ قَالَ حِينَ يَدْخُلُ السُّوقَ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ يُحْيِي وَيُمِيتُ وَهُوَ حَىٌّ لاَ يَمُوتُ بِيَدِهِ الْخَيْرُ كُلُّهُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ كَتَبَ اللَّهُ لَهُ أَلْفَ أَلْفِ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Very Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-rabbighfir-warham": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-মুমিনূন: ১১৮",
+     "surah": 23,
+     "surah_name_bn": "আল-মুমিনূন",
+     "ayah_from": 118,
+     "ayah_to": 118,
+     "check": {
+      "status": "partial",
+      "score": 0.83,
+      "excerpt": "وَقُل رَّبِّ ٱغۡفِرۡ وَٱرۡحَمۡ وَأَنتَ خَیۡرُ ٱلرَّ ٰحِمِینَ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "istighfar-rabbana-zalamna": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আ’রাফ: ২৩",
+     "surah": 7,
+     "surah_name_bn": "আল-আ’রাফ",
+     "ayah_from": 23,
+     "ayah_to": 23,
+     "check": {
+      "status": "match",
+      "score": 0.91,
+      "excerpt": "قَالَا رَبَّنَا ظَلَمۡنَاۤ أَنفُسَنَا وَإِن لَّمۡ تَغۡفِرۡ لَنَا وَتَرۡحَمۡنَا لَنَكُونَنَّ مِنَ ٱلۡخَـٰسِرِینَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-rabbana-la-tuzigh": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আলে ইমরান: ৮",
+     "surah": 3,
+     "surah_name_bn": "আলে ইমরান",
+     "ayah_from": 8,
+     "ayah_to": 8,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "رَبَّنَا لَا تُزِغۡ قُلُوبَنَا بَعۡدَ إِذۡ هَدَیۡتَنَا وَهَبۡ لَنَا مِن لَّدُنكَ رَحۡمَةًۚ إِنَّكَ أَنتَ ٱلۡوَهَّابُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-rabbana-taqabbal": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-বাকারা: ১২৭",
+     "surah": 2,
+     "surah_name_bn": "আল-বাকারা",
+     "ayah_from": 127,
+     "ayah_to": 127,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… ٰهِـۧمُ ٱلۡقَوَاعِدَ مِنَ ٱلۡبَیۡتِ وَإِسۡمَـٰعِیلُ رَبَّنَا تَقَبَّلۡ مِنَّاۤۖ إِنَّكَ أَنتَ ٱلسَّمِیعُ ٱلۡعَلِیمُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-rabbana-ghfirli-walidayya": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা ইবরাহীম: ৪১",
+     "surah": 14,
+     "surah_name_bn": "ইবরাহীম",
+     "ayah_from": 41,
+     "ayah_to": 41,
+     "check": {
+      "status": "partial",
+      "score": 0.88,
+      "excerpt": "رَبَّنَا ٱغۡفِرۡ لِی وَلِوَ ٰلِدَیَّ وَلِلۡمُؤۡمِنِینَ یَوۡمَ یَقُومُ ٱلۡحِسَابُ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "istighfar-astaghfirullah-3": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 591",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 591,
+     "check": {
+      "status": "partial",
+      "score": 0.83,
+      "excerpt": "… وسلم إِذَا انْصَرَفَ مِنْ صَلاَتِهِ اسْتَغْفَرَ ثَلاَثًا وَقَالَ اللَّهُمَّ أَنْتَ السَّلاَمُ وَمِنْكَ السَّلاَمُ تَبَارَكْتَ ذَا الْجَلاَلِ وَالإِكْرَامِ قَالَ الْوَلِيدُ فَقُلْتُ لِلأَوْزَاعِيِّ كَيْفَ …",
+      "suggested": {
+       "number": 592,
+       "score": 0.92
+      }
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "istighfar-subhanakallahumma": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 794",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 794,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وسلم يَقُولُ فِي رُكُوعِهِ وَسُجُودِهِ سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ، اللَّهُمَّ اغْفِرْ لِي"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 484",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 484,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَنْ يَقُولَ فِي رُكُوعِهِ وَسُجُودِهِ سُبْحَانَكَ اللَّهُمَّ رَبَّنَا وَبِحَمْدِكَ اللَّهُمَّ اغْفِرْ لِي يَتَأَوَّلُ الْقُرْآنَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-subhanallah-bihamdihi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6405",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6405,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم قَالَ مَنْ قَالَ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ‏.‏ فِي يَوْمٍ مِائَةَ مَرَّةٍ حُطَّتْ …",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2691",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2691,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَكْثَرَ مِنْ ذَلِكَ وَمَنْ قَالَ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ فِي يَوْمٍ مِائَةَ مَرَّةٍ حُطَّتْ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-kalimat-habibatan": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6406",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6406,
+     "check": {
+      "status": "mismatch",
+      "score": 0.5,
+      "excerpt": "… إِلَى الرَّحْمَنِ، سُبْحَانَ اللَّهِ الْعَظِيمِ، سُبْحَانَ اللَّهِ وَبِحَمْدِهِ",
+      "suggested": {
+       "number": 6682,
+       "score": 1.0
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 7563",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 7563,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عَلَى اللِّسَانِ، ثَقِيلَتَانِ فِي الْمِيزَانِ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ، سُبْحَانَ اللَّهِ الْعَظِيمِ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2694",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2694,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فِي الْمِيزَانِ حَبِيبَتَانِ إِلَى الرَّحْمَنِ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-la-hawla": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 4205",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 4205,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم فَسَمِعَنِي وَأَنَا أَقُولُ لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ، فَقَالَ لِي يَا عَبْدَ اللَّهِ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2704",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2704,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَ وَأَنَا خَلْفَهُ وَأَنَا أَقُولُ لاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ فَقَالَ يَا عَبْدَ اللَّهِ بْنَ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-four-best-words": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2137",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2137,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… \"أَحَبُّ الْكَلاَمِ إِلَى اللَّهِ أَرْبَعٌ سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلاَ إِلَهَ إِلاَّ اللَّهُ وَاللَّهُ أَكْبَرُ‏.‏ لاَ يَضُرُّكَ بَأَيِّهِنَّ بَدَأْتَ.‏ وَلاَ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2695",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2695,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الله عليه وسلم لأَنْ أَقُولَ سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلاَ إِلَهَ إِلاَّ اللَّهُ وَاللَّهُ أَكْبَرُ أَحَبُّ إِلَىَّ مِمَّا طَلَعَتْ عَلَيْهِ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-tahlil-100": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 3293",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 3293,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم قَالَ مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ‏.‏ فِي يَوْمٍ مِائَةَ مَرَّةٍ، كَانَتْ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2691",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2691,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم قَالَ مَنْ قَالَ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ فِي يَوْمٍ مِائَةَ مَرَّةٍ كَانَتْ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-sleep-restless": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 3893",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 3893,
+     "check": {
+      "status": "partial",
+      "score": 0.86,
+      "excerpt": "… كَانَ يُعَلِّمُهُمْ مِنَ الْفَزَعِ كَلِمَاتٍ أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ غَضَبِهِ وَشَرِّ عِبَادِهِ وَمِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَنْ يَحْضُرُونِ وَكَانَ عَبْدُ اللَّهِ بْنُ عَمْرٍو …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3528",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3528,
+     "check": {
+      "status": "match",
+      "score": 0.93,
+      "excerpt": "… فَزِعَ أَحَدُكُمْ فِي النَّوْمِ فَلْيَقُلْ أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّةِ مِنْ غَضَبِهِ وَعِقَابِهِ وَشَرِّ عِبَادِهِ وَمِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَنْ يَحْضُرُونِ فَإِنَّهَا لَنْ تَضُرَّهُ قَالَ وَكَانَ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-waking-night": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 1154",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 1154,
+     "check": {
+      "status": "match",
+      "score": 0.92,
+      "excerpt": "… مَنْ تَعَارَّ مِنَ اللَّيْلِ فَقَالَ لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ، وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ‏.‏ الْحَمْدُ لِلَّهِ، وَسُبْحَانَ اللَّهِ، وَلاَ إِلَهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ، وَلاَ حَوْلَ وَلاَ قُوَّةَ إِلاَّ بِاللَّهِ‏.‏ ثُمَّ قَالَ اللَّهُمَّ اغْفِرْ لِي‏.‏ أَوْ دَعَا اسْتُجِيبَ، فَإِنْ تَوَضَّأَ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-debt-kafini": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3563",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3563,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… أَدَّاهُ اللَّهُ عَنْكَ قَالَ قُلِ اللَّهُمَّ اكْفِنِي بِحَلاَلِكَ عَنْ حَرَامِكَ وَأَغْنِنِي بِفَضْلِكَ عَمَّنْ سِوَاكَ قَالَ أَبُو عِيسَى هَذَا حَدِيثٌ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rizq-allahumma-inni-asaluka": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2721",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2721,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم أَنَّهُ كَانَ يَقُولُ اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-jawami-al-khayr": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে ইবনে মাজাহ: 3846",
+     "book_key": "ibnmajah",
+     "book_bn": "সুনানে ইবনে মাজাহ",
+     "book_en": "Sunan Ibn Majah",
+     "number": 3846,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم عَلَّمَهَا هَذَا الدُّعَاءَ اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنَ الْخَيْرِ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ وَأَعُوذُ بِكَ مِنَ الشَّرِّ كُلِّهِ عَاجِلِهِ وَآجِلِهِ مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ خَيْرِ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Fouad Abd al-Baqi",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 25019",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 25019,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-jannah-jahannam": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 792",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 792,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فِي الصَّلاَةِ قَالَ أَتَشَهَّدُ وَأَقُولُ اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَأَعُوذُ بِكَ مِنَ النَّارِ أَمَا إِنِّي لاَ أُحْسِنُ دَنْدَنَتَكَ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 2572",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 2572,
+     "check": {
+      "status": "mismatch",
+      "score": 0.5,
+      "excerpt": "… الْجَنَّةَ ثَلاَثَ مَرَّاتٍ قَالَتِ الْجَنَّةُ اللَّهُمَّ أَدْخِلْهُ الْجَنَّةَ وَمَنِ اسْتَجَارَ مِنَ النَّارِ ثَلاَثَ مَرَّاتٍ قَالَتِ النَّارُ اللَّهُمَّ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-meeting-allah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3490",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3490,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كَانَ مِنْ دُعَاءِ دَاوُدَ يَقُولُ اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ وَحُبَّ مَنْ يُحِبُّكَ وَالْعَمَلَ الَّذِي يُبَلِّغُنِي حُبَّكَ اللَّهُمَّ اجْعَلْ حُبَّكَ أَحَبَّ إِلَىَّ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Daif"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-death-husnul-khatimah": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আ’রাফ: ১২৬",
+     "surah": 7,
+     "surah_name_bn": "আল-আ’রাফ",
+     "ayah_from": 126,
+     "ayah_to": 126,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… ءَامَنَّا بِءَایَـٰتِ رَبِّنَا لَمَّا جَاۤءَتۡنَاۚ رَبَّنَاۤ أَفۡرِغۡ عَلَیۡنَا صَبۡرࣰا وَتَوَفَّنَا مُسۡلِمِینَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-yusuf-muslim": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা ইউসুফ: ১০১",
+     "surah": 12,
+     "surah_name_bn": "ইউসুফ",
+     "ayah_from": 101,
+     "ayah_to": 101,
+     "check": {
+      "status": "partial",
+      "score": 0.75,
+      "excerpt": "… أَنتَ وَلِیِّۦ فِی ٱلدُّنۡیَا وَٱلۡءَاخِرَةِۖ تَوَفَّنِی مُسۡلِمࣰا وَأَلۡحِقۡنِی بِٱلصَّـٰلِحِینَ",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-muadh-morning-evening": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3591",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3591,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… صلى الله عليه وسلم يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ مُنْكَرَاتِ الأَخْلاَقِ وَالأَعْمَالِ وَالأَهْوَاءِ قَالَ هَذَا حَدِيثٌ حَسَنٌ غَرِيبٌ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-enemy-protection": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1537",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1537,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كَانَ إِذَا خَافَ قَوْمًا قَالَ اللَّهُمَّ إِنَّا نَجْعَلُكَ فِي نُحُورِهِمْ وَنَعُوذُ بِكَ مِنْ شُرُورِهِمْ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-deceased-maghfirah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 963",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 963,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فَحَفِظْتُ مِنْ دُعَائِهِ وَهُوَ يَقُولُ اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ وَعَافِهِ وَاعْفُ عَنْهُ وَأَكْرِمْ نُزُلَهُ وَوَسِّعْ مُدْخَلَهُ وَاغْسِلْهُ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ وَنَقِّهِ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-graveyard-enter": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 975",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 975,
+     "check": {
+      "status": "partial",
+      "score": 0.89,
+      "excerpt": "… أَهْلِ الدِّيَارِ وَفِي رِوَايَةِ زُهَيْرٍ السَّلاَمُ عَلَيْكُمْ أَهْلَ الدِّيَارِ مِنَ الْمُؤْمِنِينَ وَالْمُسْلِمِينَ وَإِنَّا إِنْ شَاءَ اللَّهُ لَلَاحِقُونَ أَسْأَلُ اللَّهَ لَنَا وَلَكُمْ الْعَافِيَةَ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "durood-sharif-short": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 408",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 408,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… رَسُولَ اللَّهِ صلى الله عليه وسلم قَالَ مَنْ صَلَّى عَلَىَّ وَاحِدَةً صَلَّى اللَّهُ عَلَيْهِ عَشْرًا"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে নাসায়ী: 1297",
+     "book_key": "nasai",
+     "book_bn": "সুনানে নাসায়ী",
+     "book_en": "Sunan an-Nasa'i",
+     "number": 1297,
+     "check": {
+      "status": "mismatch",
+      "score": 0.33,
+      "excerpt": "… رَسُولُ اللَّهِ صلى الله عليه وسلم مَنْ صَلَّى عَلَىَّ صَلاَةً وَاحِدَةً صَلَّى اللَّهُ عَلَيْهِ …",
+      "grades": [
+       {
+        "name": "Abu Ghuddah",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "durood-umari-an-nabiyyi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 486",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 486,
+     "check": {
+      "status": "mismatch",
+      "score": 0.2,
+      "excerpt": "… يَصْعَدُ مِنْهُ شَيْءٌ حَتَّى تُصَلِّيَ عَلَى نَبِيِّكَ صلى الله عليه وسلم",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "quran",
+     "raw": "সূরা আহযাব: ৫৬",
+     "surah": 33,
+     "surah_name_bn": "আহযাব",
+     "ayah_from": 56,
+     "ayah_to": 56,
+     "check": {
+      "status": "mismatch",
+      "score": 0.2,
+      "excerpt": "إِنَّ ٱللَّهَ وَمَلَـٰۤئِكَتَهُۥ یُصَلُّونَ عَلَى ٱلنَّبِیِّۚ یَـٰۤأَیُّهَا ٱلَّذِینَ ءَامَنُوا۟ صَلُّوا۟ عَلَیۡهِ وَسَلِّمُوا۟ تَسۡلِیمًا"
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-qurb-karb": {
+   "refs": [
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 3712",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 3712,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "সহীহ ইবনে হিব্বান: 972",
+     "book_bn": "সহীহ ইবনে হিব্বান",
+     "book_en": "Sahih Ibn Hibban",
+     "number": 972,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "unchecked"
+  },
+  "dua-rabbana-ghfir-ikhwanina": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-হাশর: ১০",
+     "surah": 59,
+     "surah_name_bn": "আল-হাশর",
+     "ayah_from": 10,
+     "ayah_to": 10,
+     "check": {
+      "status": "partial",
+      "score": 0.79,
+      "excerpt": "وَٱلَّذِینَ جَاۤءُو مِنۢ بَعۡدِهِمۡ یَقُولُونَ رَبَّنَا ٱغۡفِرۡ لَنَا وَلِإِخۡوَ ٰنِنَا ٱلَّذِینَ سَبَقُونَا بِٱلۡإِیمَـٰنِ وَلَا تَجۡعَلۡ فِی قُلُوبِنَا غِلࣰّا لِّلَّذِینَ ءَامَنُوا۟ رَبَّنَاۤ إِنَّكَ رَءُوفࣱ رَّحِیمٌ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-barakah-time": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1551",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1551,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… اللَّهِ عَلِّمْنِي دُعَاءً قَالَ قُلِ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ سَمْعِي وَمِنْ شَرِّ بَصَرِي وَمِنْ شَرِّ لِسَانِي وَمِنْ شَرِّ قَلْبِي وَمِنْ شَرِّ مَنِيِّي",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3492",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3492,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَ فَأَخَذَ بِكَتِفِي فَقَالَ قُلِ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ سَمْعِي وَمِنْ شَرِّ بَصَرِي وَمِنْ شَرِّ لِسَانِي وَمِنْ شَرِّ قَلْبِي وَمِنْ شَرِّ مَنِيِّي يَعْنِي فَرْجَهُ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rizq-barakah-home": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3500",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3500,
+     "check": {
+      "status": "partial",
+      "score": 0.75,
+      "excerpt": "… وَصَلَ إِلَىَّ مِنْهُ أَنَّكَ تَقُولُ اللَّهُمَّ اغْفِرْ لِي ذَنْبِي وَوَسِّعْ لِي فِي رِزْقِي وَبَارِكْ لِي فِيمَا رَزَقْتَنِي قَالَ فَهَلْ تَرَاهُنَّ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Daif"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "সুনানে নাসায়ী কুবরা: 9908",
+     "book_bn": "সুনানে নাসায়ী কুবরা",
+     "book_en": "Sunan al-Kubra (Nasai)",
+     "number": 9908,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-qaza-falah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2720",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2720,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… صلى الله عليه وسلم يَقُولُ اللَّهُمَّ أَصْلِحْ لِي دِينِيَ الَّذِي هُوَ عِصْمَةُ أَمْرِي وَأَصْلِحْ لِي دُنْيَاىَ الَّتِي فِيهَا مَعَاشِي وَأَصْلِحْ لِي آخِرَتِي الَّتِي فِيهَا مَعَادِي وَاجْعَلِ الْحَيَاةَ زِيَادَةً لِي فِي …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-vehicle-mount": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আয-যুখরুফ: ১৩-১৪",
+     "surah": 43,
+     "surah_name_bn": "আয-যুখরুফ",
+     "ayah_from": 13,
+     "ayah_to": 14,
+     "check": {
+      "status": "match",
+      "score": 0.92,
+      "excerpt": "… إِذَا ٱسۡتَوَیۡتُمۡ عَلَیۡهِ وَتَقُولُوا۟ سُبۡحَـٰنَ ٱلَّذِی سَخَّرَ لَنَا هَـٰذَا وَمَا كُنَّا لَهُۥ مُقۡرِنِینَ وَإِنَّاۤ إِلَىٰ رَبِّنَا لَمُنقَلِبُونَ"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3446",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3446,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَ الْحَمْدُ لِلَّهِ ثُمَّ قَالَ سبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ ثُمَّ قَالَ الْحَمْدُ لِلَّهِ ثَلاَثًا …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-mirror": {
+   "refs": [
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 24392",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 24392,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "ইবনে হিব্বান: 959",
+     "book_bn": "ইবনে হিব্বান",
+     "book_en": "Sahih Ibn Hibban",
+     "number": 959,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "unchecked"
+  },
+  "dua-sneeze": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6224",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6224,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… قَالَ إِذَا عَطَسَ أَحَدُكُمْ فَلْيَقُلِ الْحَمْدُ لِلَّهِ‏.‏ وَلْيَقُلْ لَهُ أَخُوهُ أَوْ صَاحِبُهُ يَرْحَمُكَ اللَّهُ‏.‏ فَإِذَا قَالَ لَهُ يَرْحَمُكَ اللَّهُ‏.‏ فَلْيَقُلْ يَهْدِيكُمُ اللَّهُ وَيُصْلِحُ بَالَكُمْ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-sleep-turn-side": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5045",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5045,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الْيُمْنَى تَحْتَ خَدِّهِ ثُمَّ يَقُولُ اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ ثَلاَثَ مِرَارٍ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3398",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3398,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… يَدَهُ تَحْتَ رَأْسِهِ ثُمَّ قَالَ اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَجْمَعُ عِبَادَكَ أَوْ تَبْعَثُ عِبَادَكَ قَالَ هَذَا حَدِيثٌ حَسَنٌ صَحِيحٌ",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-sleep-tasbih-hamd": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2715",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2715,
+     "check": {
+      "status": "match",
+      "score": 0.93,
+      "excerpt": "… إِذَا أَوَى إِلَى فِرَاشِهِ قَالَ الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَكَفَانَا وَآوَانَا فَكَمْ مِمَّنْ لاَ كَافِيَ لَهُ وَلاَ مُئْوِيَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-wake-up-full": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3401",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3401,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عِبَادَكَ الصَّالِحِينَ فَإِذَا اسْتَيْقَظَ فَلْيَقُلِ الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي وَرَدَّ عَلَىَّ رُوحِي وَأَذِنَ لِي بِذِكْرِهِ قَالَ وَفِي الْبَابِ عَنْ جَابِرٍ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-study-memory": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-কাহাফ: ১০",
+     "surah": 18,
+     "surah_name_bn": "আল-কাহাফ",
+     "ayah_from": 10,
+     "ayah_to": 10,
+     "check": {
+      "status": "match",
+      "score": 0.9,
+      "excerpt": "… أَوَى ٱلۡفِتۡیَةُ إِلَى ٱلۡكَهۡفِ فَقَالُوا۟ رَبَّنَاۤ ءَاتِنَا مِن لَّدُنكَ رَحۡمَةࣰ وَهَیِّئۡ لَنَا مِنۡ أَمۡرِنَا رَشَدࣰا"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-patience-steadfast": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-বাকারা: ২৫০",
+     "surah": 2,
+     "surah_name_bn": "আল-বাকারা",
+     "ayah_from": 250,
+     "ayah_to": 250,
+     "check": {
+      "status": "match",
+      "score": 0.9,
+      "excerpt": "وَلَمَّا بَرَزُوا۟ لِجَالُوتَ وَجُنُودِهِۦ قَالُوا۟ رَبَّنَاۤ أَفۡرِغۡ عَلَیۡنَا صَبۡرࣰا وَثَبِّتۡ أَقۡدَامَنَا وَٱنصُرۡنَا عَلَى ٱلۡقَوۡمِ ٱلۡكَـٰفِرِینَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-forgive-forgetfulness": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-বাকারা: ২৮৬",
+     "surah": 2,
+     "surah_name_bn": "আল-বাকারা",
+     "ayah_from": 286,
+     "ayah_to": 286,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَا كَسَبَتۡ وَعَلَیۡهَا مَا ٱكۡتَسَبَتۡۗ رَبَّنَا لَا تُؤَاخِذۡنَاۤ إِن نَّسِینَاۤ أَوۡ أَخۡطَأۡنَاۚ رَبَّنَا وَلَا تَحۡمِلۡ عَلَیۡنَاۤ إِصۡرࣰا كَمَا حَمَلۡتَهُۥ عَلَى ٱلَّذِینَ مِن قَبۡلِنَاۚ رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 126",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 126,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لاَ تُؤَاخِذْنَا إِنْ نَسِينَا أَوْ أَخْطَأْنَا‏}‏ قَالَ قَدْ فَعَلْتُ رَبَّنَا وَلاَ تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِنْ قَبْلِنَا‏}‏ قَالَ قَدْ فَعَلْتُ وَاغْفِرْ لَنَا …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 807",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 807,
+     "check": {
+      "status": "mismatch",
+      "score": 0.06,
+      "excerpt": "… صلى الله عليه وسلم الآيَتَانِ مِنْ آخِرِ سُورَةِ الْبَقَرَةِ مَنْ قَرَأَهُمَا …",
+      "suggested": {
+       "number": 125,
+       "score": 1.0
+      }
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-nizam-ibadah": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 5671",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 5671,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كَانَ لاَ بُدَّ فَاعِلاً فَلْيَقُلِ اللَّهُمَّ أَحْيِنِي مَا كَانَتِ الْحَيَاةُ خَيْرًا لِي، وَتَوَفَّنِي إِذَا كَانَتِ الْوَفَاةُ خَيْرًا لِي"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2680",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2680,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كَانَ لاَ بُدَّ مُتَمَنِّيًا فَلْيَقُلِ اللَّهُمَّ أَحْيِنِي مَا كَانَتِ الْحَيَاةُ خَيْرًا لِي وَتَوَفَّنِي إِذَا كَانَتِ الْوَفَاةُ خَيْرًا لِي"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-sadaqah-intention": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2725",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2725,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… صلى الله عليه وسلم قُلِ اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي وَاذْكُرْ بِالْهُدَى هِدَايَتَكَ الطَّرِيقَ وَالسَّدَادِ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-old-age-protection": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6367",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6367,
+     "check": {
+      "status": "partial",
+      "score": 0.83,
+      "excerpt": "… صلى الله عليه وسلم يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْهَرَمِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَأَعُوذُ بِكَ مِنْ فِتْنَةِ الْمَحْيَا …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2706",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2706,
+     "check": {
+      "status": "partial",
+      "score": 0.83,
+      "excerpt": "… صلى الله عليه وسلم يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَالْجُبْنِ وَالْهَرَمِ وَالْبُخْلِ وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ",
+      "suggested": {
+       "number": 2722,
+       "score": 1.0
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2722",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2722,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم يَقُولُ كَانَ يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَالْجُبْنِ وَالْبُخْلِ وَالْهَرَمِ وَعَذَابِ الْقَبْرِ اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا وَزَكِّهَا …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-nafs-taqwa": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2722",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2722,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وَالْجُبْنِ وَالْبُخْلِ وَالْهَرَمِ وَعَذَابِ الْقَبْرِ اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا أَنْتَ وَلِيُّهَا وَمَوْلاَهَا اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-humble-heart": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2722",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2722,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَنْ زَكَّاهَا أَنْتَ وَلِيُّهَا وَمَوْلاَهَا اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لاَ يَنْفَعُ وَمِنْ قَلْبٍ لاَ يَخْشَعُ وَمِنْ نَفْسٍ لاَ تَشْبَعُ وَمِنْ دَعْوَةٍ لاَ يُسْتَجَابُ لَهَا"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-guest-host": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2042",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2042,
+     "check": {
+      "status": "partial",
+      "score": 0.88,
+      "excerpt": "… دَابَّتِهِ ادْعُ اللَّهَ لَنَا فَقَالَ اللَّهُمَّ بَارِكْ لَهُمْ فِي مَا رَزَقْتَهُمْ وَاغْفِرْ لَهُمْ وَارْحَمْهُمْ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-break-fast-host": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 3854",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 3854,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… النَّبِيُّ صلى الله عليه وسلم أَفْطَرَ عِنْدَكُمُ الصَّائِمُونَ وَأَكَلَ طَعَامَكُمُ الأَبْرَارُ وَصَلَّتْ عَلَيْكُمُ الْمَلاَئِكَةُ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-newlywed": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 2130",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 2130,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… رَفَّأَ الإِنْسَانَ إِذَا تَزَوَّجَ قَالَ بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 1091",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 1091,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… رَفَّأَ الإِنْسَانَ إِذَا تَزَوَّجَ قَالَ بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ قَالَ وَفِي الْبَابِ عَنْ عَقِيلِ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-fear-people": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 3005",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 3005,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… بِهِ فَصَعِدُوا بِهِ الْجَبَلَ فَقَالَ اللَّهُمَّ اكْفِنِيهِمْ بِمَا شِئْتَ فَرَجَفَ بِهِمُ الْجَبَلُ فَسَقَطُوا وَجَاءَ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-travel-return": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 1797",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 1797,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وَهُوَ عَلَى كُلِّ شَىْءٍ قَدِيرٌ، آيِبُونَ تَائِبُونَ عَابِدُونَ سَاجِدُونَ لِرَبِّنَا حَامِدُونَ، صَدَقَ اللَّهُ وَعْدَهُ وَنَصَرَ عَبْدَهُ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 1342",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 1342,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… وَإِذَا رَجَعَ قَالَهُنَّ وَزَادَ فِيهِنَّ آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-majlis-end": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1522",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1522,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فِي دُبُرِ كُلِّ صَلاَةٍ تَقُولُ اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ وَأَوْصَى بِذَلِكَ مُعَاذٌ الصُّنَابِحِيَّ وَأَوْصَى …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে নাসায়ী: 1303",
+     "book_key": "nasai",
+     "book_bn": "সুনানে নাসায়ী",
+     "book_en": "Sunan an-Nasa'i",
+     "number": 1303,
+     "check": {
+      "status": "partial",
+      "score": 0.86,
+      "excerpt": "… تَقُولَ فِي كُلِّ صَلاَةٍ رَبِّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ",
+      "grades": [
+       {
+        "name": "Abu Ghuddah",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rabbana-sarf-jahannam": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-ফুরকান: ৬৫",
+     "surah": 25,
+     "surah_name_bn": "আল-ফুরকান",
+     "ayah_from": 65,
+     "ayah_to": 65,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "وَٱلَّذِینَ یَقُولُونَ رَبَّنَا ٱصۡرِفۡ عَنَّا عَذَابَ جَهَنَّمَۖ إِنَّ عَذَابَهَا كَانَ غَرَامًا"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rabbana-amanna": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আলে ইমরান: ১৬",
+     "surah": 3,
+     "surah_name_bn": "আলে ইমরান",
+     "ayah_from": 16,
+     "ayah_to": 16,
+     "check": {
+      "status": "partial",
+      "score": 0.89,
+      "excerpt": "ٱلَّذِینَ یَقُولُونَ رَبَّنَاۤ إِنَّنَاۤ ءَامَنَّا فَٱغۡفِرۡ لَنَا ذُنُوبَنَا وَقِنَا عَذَابَ ٱلنَّارِ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-rabbana-faghfir-lana": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আলে ইমরান: ১৯৩",
+     "surah": 3,
+     "surah_name_bn": "আলে ইমরান",
+     "ayah_from": 193,
+     "ayah_to": 193,
+     "check": {
+      "status": "match",
+      "score": 0.9,
+      "excerpt": "… لِلۡإِیمَـٰنِ أَنۡ ءَامِنُوا۟ بِرَبِّكُمۡ فَءَامَنَّاۚ رَبَّنَا فَٱغۡفِرۡ لَنَا ذُنُوبَنَا وَكَفِّرۡ عَنَّا سَیِّءَاتِنَا وَتَوَفَّنَا مَعَ ٱلۡأَبۡرَارِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-hasbunallah-maulana": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আনফাল: ৪০",
+     "surah": 8,
+     "surah_name_bn": "আল-আনফাল",
+     "ayah_from": 40,
+     "ayah_to": 40,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… تَوَلَّوۡا۟ فَٱعۡلَمُوۤا۟ أَنَّ ٱللَّهَ مَوۡلَىٰكُمۡۚ نِعۡمَ ٱلۡمَوۡلَىٰ وَنِعۡمَ ٱلنَّصِیرُ",
+      "weak": true
+     }
+    },
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-হাজ্জ: ৭৮",
+     "surah": 22,
+     "surah_name_bn": "আল-হাজ্জ",
+     "ayah_from": 78,
+     "ayah_to": 78,
+     "check": {
+      "status": "partial",
+      "score": 0.75,
+      "excerpt": "… وَٱعۡتَصِمُوا۟ بِٱللَّهِ هُوَ مَوۡلَىٰكُمۡۖ فَنِعۡمَ ٱلۡمَوۡلَىٰ وَنِعۡمَ ٱلنَّصِیرُ",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-istikhfar-musa-nafsi": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-কাসাস: ১৬",
+     "surah": 28,
+     "surah_name_bn": "আল-কাসাস",
+     "ayah_from": 16,
+     "ayah_to": 16,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "قَالَ رَبِّ إِنِّی ظَلَمۡتُ نَفۡسِی فَٱغۡفِرۡ لِی فَغَفَرَ لَهُۥۤۚ إِنَّهُۥ هُوَ ٱلۡغَفُورُ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-luqman-shukr": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-আহকাফ: ১৫",
+     "surah": 46,
+     "surah_name_bn": "আল-আহকাফ",
+     "ayah_from": 15,
+     "ayah_to": 15,
+     "check": {
+      "status": "partial",
+      "score": 0.79,
+      "excerpt": "… أَشُدَّهُۥ وَبَلَغَ أَرۡبَعِینَ سَنَةࣰ قَالَ رَبِّ أَوۡزِعۡنِیۤ أَنۡ أَشۡكُرَ نِعۡمَتَكَ ٱلَّتِیۤ أَنۡعَمۡتَ عَلَیَّ وَعَلَىٰ وَ ٰلِدَیَّ وَأَنۡ أَعۡمَلَ صَـٰلِحࣰا تَرۡضَىٰهُ وَأَصۡلِحۡ لِی فِی …"
+     }
+    },
+    {
+     "kind": "quran",
+     "raw": "সূরা আন-নামল: ১৯",
+     "surah": 27,
+     "surah_name_bn": "আন-নামল",
+     "ayah_from": 19,
+     "ayah_to": 19,
+     "check": {
+      "status": "partial",
+      "score": 0.79,
+      "excerpt": "فَتَبَسَّمَ ضَاحِكࣰا مِّن قَوۡلِهَا وَقَالَ رَبِّ أَوۡزِعۡنِیۤ أَنۡ أَشۡكُرَ نِعۡمَتَكَ ٱلَّتِیۤ أَنۡعَمۡتَ عَلَیَّ وَعَلَىٰ وَ ٰلِدَیَّ وَأَنۡ أَعۡمَلَ صَـٰلِحࣰا تَرۡضَىٰهُ وَأَدۡخِلۡنِی بِرَحۡمَتِكَ فِی …"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-lut-family": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আশ-শুআরা: ১৬৯",
+     "surah": 26,
+     "surah_name_bn": "আশ-শুআরা",
+     "ayah_from": 169,
+     "ayah_to": 169,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "رَبِّ نَجِّنِی وَأَهۡلِی مِمَّا یَعۡمَلُونَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-tawakkul-ibrahim": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-মুমতাহিনা: ৪",
+     "surah": 60,
+     "surah_name_bn": "আল-মুমতাহিনা",
+     "ayah_from": 4,
+     "ayah_to": 4,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… لَكَ مِنَ ٱللَّهِ مِن شَیۡءࣲۖ رَّبَّنَا عَلَیۡكَ تَوَكَّلۡنَا وَإِلَیۡكَ أَنَبۡنَا وَإِلَیۡكَ ٱلۡمَصِیرُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-ibrahim-fitnah": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-মুমতাহিনা: ৫",
+     "surah": 60,
+     "surah_name_bn": "আল-মুমতাহিনা",
+     "ayah_from": 5,
+     "ayah_to": 5,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "رَبَّنَا لَا تَجۡعَلۡنَا فِتۡنَةࣰ لِّلَّذِینَ كَفَرُوا۟ وَٱغۡفِرۡ لَنَا رَبَّنَاۤۖ إِنَّكَ أَنتَ ٱلۡعَزِیزُ ٱلۡحَكِیمُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-rabbana-atmim-nurana": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আত-তাহরীম: ৮",
+     "surah": 66,
+     "surah_name_bn": "আত-তাহরীম",
+     "ayah_from": 8,
+     "ayah_to": 8,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… یَسۡعَىٰ بَیۡنَ أَیۡدِیهِمۡ وَبِأَیۡمَـٰنِهِمۡ یَقُولُونَ رَبَّنَاۤ أَتۡمِمۡ لَنَا نُورَنَا وَٱغۡفِرۡ لَنَاۤۖ إِنَّكَ عَلَىٰ كُلِّ شَیۡءࣲ قَدِیرࣱ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-barakah-morning-ummati": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 2606",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 2606,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… صلى الله عليه وسلم قَالَ اللَّهُمَّ بَارِكْ لأُمَّتِي فِي بُكُورِهَا وَكَانَ إِذَا بَعَثَ سَرِيَّةً أَوْ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 1212",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 1212,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… اللَّهِ صلى الله عليه وسلم اللَّهُمَّ بَارِكْ لأُمَّتِي فِي بُكُورِهَا قَالَ وَكَانَ إِذَا بَعَثَ سَرِيَّةً …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-guidance-path": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 770",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 770,
+     "check": {
+      "status": "match",
+      "score": 0.95,
+      "excerpt": "… قَامَ مِنَ اللَّيْلِ افْتَتَحَ صَلاَتَهُ اللَّهُمَّ رَبَّ جِبْرَائِيلَ وَمِيكَائِيلَ وَإِسْرَافِيلَ فَاطِرَ السَّمَوَاتِ وَالأَرْضِ عَالِمَ الْغَيْبِ وَالشَّهَادَةِ أَنْتَ تَحْكُمُ بَيْنَ عِبَادِكَ فِيمَا كَانُوا فِيهِ يَخْتَلِفُونَ اهْدِنِي لِمَا اخْتُلِفَ فِيهِ مِنَ الْحَقِّ بِإِذْنِكَ إِنَّكَ تَهْدِي مَنْ تَشَاءُ إِلَى …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-noor-heart": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 6316",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 6316,
+     "check": {
+      "status": "partial",
+      "score": 0.79,
+      "excerpt": "… يَتَوَضَّأْ، وَكَانَ يَقُولُ فِي دُعَائِهِ اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا، وَعَنْ يَمِينِي نُورًا، وَعَنْ يَسَارِي نُورًا، وَفَوْقِي نُورًا، …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 763",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 763,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… اللَّهِ صلى الله عليه وسلم اللَّهُمَّ اجْعَلْ لِي فِي قَلْبِي نُورًا وَفِي لِسَانِي نُورًا وَفِي سَمْعِي نُورًا وَفِي بَصَرِي نُورًا وَمِنْ فَوْقِي نُورًا وَمِنْ تَحْتِي …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-tahajjud-praise": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 1120",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 1120,
+     "check": {
+      "status": "partial",
+      "score": 0.73,
+      "excerpt": "… قَامَ مِنَ اللَّيْلِ يَتَهَجَّدُ قَالَ اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ قَيِّمُ السَّمَوَاتِ وَالأَرْضِ وَمَنْ فِيهِنَّ وَلَكَ الْحَمْدُ، لَكَ مُلْكُ السَّمَوَاتِ وَالأَرْضِ وَمَنْ فِيهِنَّ، وَلَكَ الْحَمْدُ أَنْتَ نُورُ السَّمَوَاتِ وَالأَرْضِ، وَلَكَ الْحَمْدُ أَنْتَ الْحَقُّ، وَوَعْدُكَ …",
+      "suggested": {
+       "number": 6317,
+       "score": 0.87
+      }
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 769",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 769,
+     "check": {
+      "status": "partial",
+      "score": 0.6,
+      "excerpt": "… إِلَى الصَّلاَةِ مِنْ جَوْفِ اللَّيْلِ اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ نُورُ السَّمَوَاتِ وَالأَرْضِ وَلَكَ الْحَمْدُ أَنْتَ قَيَّامُ السَّمَوَاتِ وَالأَرْضِ وَلَكَ الْحَمْدُ أَنْتَ رَبُّ السَّمَوَاتِ وَالأَرْضِ وَمَنْ فِيهِنَّ أَنْتَ الْحَقُّ وَوَعْدُكَ الْحَقُّ وَقَوْلُكَ الْحَقُّ …"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-rain-stop": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 1014",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 1014,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم يَدَيْهِ ثُمَّ قَالَ اللَّهُمَّ حَوَالَيْنَا وَلاَ عَلَيْنَا، اللَّهُمَّ عَلَى الآكَامِ وَالظِّرَابِ وَبُطُونِ الأَوْدِيَةِ وَمَنَابِتِ الشَّجَرِ قَالَ فَأَقْلَعَتْ وَخَرَجْنَا نَمْشِي فِي …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-new-moon": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3451",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3451,
+     "check": {
+      "status": "mismatch",
+      "score": 0.5,
+      "excerpt": "… يَحْيَى بْنِ طَلْحَةَ بْنِ عُبَيْدِ اللَّهِ، عَنْ أَبِيهِ، عَنْ جَدِّهِ، طَلْحَةَ بْنِ عُبَيْدِ اللَّهِ أَنَّ النَّبِيَّ صلى الله عليه وسلم كَانَ إِذَا رَأَى الْهِلاَلَ قَالَ اللَّهُمَّ أَهْلِلْهُ عَلَيْنَا بِالْيُمْنِ وَالإِيمَانِ وَالسَّلاَمَةِ وَالإِسْلاَمِ رَبِّي وَرَبُّكَ اللَّهُ قَالَ أَبُو عِيسَى هَذَا حَدِيثٌ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "সুনানে দারেমী: 1697",
+     "book_bn": "সুনানে দারেমী",
+     "book_en": "Sunan ad-Darimi",
+     "number": 1697,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-debt-anxiety-7": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 832",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 832,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مِنْ فِتْنَةِ الْمَحْيَا وَفِتْنَةِ الْمَمَاتِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْمَأْثَمِ وَالْمَغْرَمِ فَقَالَ لَهُ قَائِلٌ مَا أَكْثَرَ …"
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ বুখারী: 2397",
+     "book_key": "bukhari",
+     "book_bn": "সহীহ বুখারী",
+     "book_en": "Sahih al-Bukhari",
+     "number": 2397,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… كَانَ يَدْعُو فِي الصَّلاَةِ وَيَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْمَأْثَمِ وَالْمَغْرَمِ فَقَالَ لَهُ قَائِلٌ مَا أَكْثَرَ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-barakah-wealth": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2739",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2739,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… اللَّهِ صلى الله عليه وسلم اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ وَتَحَوُّلِ عَافِيَتِكَ وَفُجَاءَةِ نِقْمَتِكَ وَجَمِيعِ سَخَطِكَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-enemy-fitnah-qasas": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-কাসাস: ২১",
+     "surah": 28,
+     "surah_name_bn": "আল-কাসাস",
+     "ayah_from": 21,
+     "ayah_to": 21,
+     "check": {
+      "status": "partial",
+      "score": 0.8,
+      "excerpt": "فَخَرَجَ مِنۡهَا خَاۤئِفࣰا یَتَرَقَّبُۖ قَالَ رَبِّ نَجِّنِی مِنَ ٱلۡقَوۡمِ ٱلظَّـٰلِمِینَ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-sulaiman-kingdom": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা সাদ: ৩৫",
+     "surah": 38,
+     "surah_name_bn": "সাদ",
+     "ayah_from": 35,
+     "ayah_to": 35,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "قَالَ رَبِّ ٱغۡفِرۡ لِی وَهَبۡ لِی مُلۡكࣰا لَّا یَنۢبَغِی لِأَحَدࣲ مِّنۢ بَعۡدِیۤۖ إِنَّكَ أَنتَ ٱلۡوَهَّابُ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-ibrahim-hikmah": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আশ-শুআরা: ৮৩-৮৪",
+     "surah": 26,
+     "surah_name_bn": "আশ-শুআরা",
+     "ayah_from": 83,
+     "ayah_to": 84,
+     "check": {
+      "status": "partial",
+      "score": 0.83,
+      "excerpt": "رَبِّ هَبۡ لِی حُكۡمࣰا وَأَلۡحِقۡنِی بِٱلصَّـٰلِحِینَ وَٱجۡعَل لِّی لِسَانَ صِدۡقࣲ فِی ٱلۡءَاخِرِینَ"
+     }
+    }
+   ],
+   "overall": "partial"
+  },
+  "dua-asiyah-jannah": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আত-তাহরীম: ১১",
+     "surah": 66,
+     "surah_name_bn": "আত-তাহরীম",
+     "ayah_from": 11,
+     "ayah_to": 11,
+     "check": {
+      "status": "match",
+      "score": 0.93,
+      "excerpt": "… ءَامَنُوا۟ ٱمۡرَأَتَ فِرۡعَوۡنَ إِذۡ قَالَتۡ رَبِّ ٱبۡنِ لِی عِندَكَ بَیۡتࣰا فِی ٱلۡجَنَّةِ وَنَجِّنِی مِن فِرۡعَوۡنَ وَعَمَلِهِۦ وَنَجِّنِی مِنَ ٱلۡقَوۡمِ ٱلظَّـٰلِمِینَ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-falaq-morning-evening": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-ফাতিহা: ৫",
+     "surah": 1,
+     "surah_name_bn": "আল-ফাতিহা",
+     "ayah_from": 5,
+     "ayah_to": 5,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "إِیَّاكَ نَعۡبُدُ وَإِیَّاكَ نَسۡتَعِینُ",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 395",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 395,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فَوَّضَ إِلَىَّ عَبْدِي فَإِذَا قَالَ إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ‏}‏ قَالَ هَذَا بَيْنِي وَبَيْنَ عَبْدِي …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "istighfar-subhanallah-azim-bihamdihi": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3464",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3464,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم قَالَ مَنْ قَالَ سُبْحَانَ اللَّهِ الْعَظِيمِ وَبِحَمْدِهِ غُرِسَتْ لَهُ نَخْلَةٌ فِي الْجَنَّةِ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ],
+      "weak": true
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-baqiyatus-salihat": {
+   "refs": [
+    {
+     "kind": "quran",
+     "raw": "সূরা আল-কাহাফ: ৪৬",
+     "surah": 18,
+     "surah_name_bn": "আল-কাহাফ",
+     "ayah_from": 46,
+     "ayah_to": 46,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "ٱلۡمَالُ وَٱلۡبَنُونَ زِینَةُ ٱلۡحَیَوٰةِ ٱلدُّنۡیَاۖ …"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 11713",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 11713,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "mismatch"
+  },
+  "dua-ramadan-suhoor-intent": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 771",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 771,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… مَا يَقُولُ بَيْنَ التَّشَهُّدِ وَالتَّسْلِيمِ اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ وَمَا أَسْرَفْتُ وَمَا أَنْتَ أَعْلَمُ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-protection-four-things": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1552",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1552,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… الله عليه وسلم كَانَ يَدْعُو اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَدْمِ وَأَعُوذُ بِكَ مِنَ التَّرَدِّي وَأَعُوذُ بِكَ مِنَ الْغَرَقِ وَالْحَرَقِ وَالْهَرَمِ وَأَعُوذُ بِكَ أَنْ يَتَخَبَّطَنِي الشَّيْطَانُ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে নাসায়ী: 5531",
+     "book_key": "nasai",
+     "book_bn": "সুনানে নাসায়ী",
+     "book_en": "Sunan an-Nasa'i",
+     "number": 5531,
+     "check": {
+      "status": "mismatch",
+      "score": 0.56,
+      "excerpt": "… صلى الله عليه وسلم يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ التَّرَدِّي وَالْهَدْمِ وَالْغَرَقِ وَالْحَرِيقِ وَأَعُوذُ بِكَ أَنْ يَتَخَبَّطَنِي الشَّيْطَانُ عِنْدَ الْمَوْتِ وَأَعُوذُ بِكَ أَنْ أَمُوتَ فِي سَبِيلِكَ مُدْبِرًا …",
+      "grades": [
+       {
+        "name": "Abu Ghuddah",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Isnaad Hasan"
+       }
+      ],
+      "suggested": {
+       "number": 5533,
+       "score": 0.88
+      }
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-protect-poverty-kufr": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5090",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5090,
+     "check": {
+      "status": "match",
+      "score": 0.94,
+      "excerpt": "… بِسُنَّتِهِ قَالَ عَبَّاسٌ فِيهِ وَتَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ لاَ إِلَهَ إِلاَّ أَنْتَ تُعِيدُهَا ثَلاَثًا حِينَ تُصْبِحُ وَثَلاَثًا …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সুনানে নাসায়ী: 5485",
+     "book_key": "nasai",
+     "book_bn": "সুনানে নাসায়ী",
+     "book_en": "Sunan an-Nasa'i",
+     "number": 5485,
+     "check": {
+      "status": "mismatch",
+      "score": 0.44,
+      "excerpt": "… عليه وسلم أَنَّهُ كَانَ يَقُولُ اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِ فَقَالَ رَجُلٌ وَيَعْدِلاَنِ قَالَ نَعَمْ",
+      "grades": [
+       {
+        "name": "Abu Ghuddah",
+        "grade": "Daif"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Daif"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-barakah-dunya-deen": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 5090",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 5090,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… إِنِّي أَسْمَعُكَ تَدْعُو كُلَّ غَدَاةٍ اللَّهُمَّ عَافِنِي فِي بَدَنِي اللَّهُمَّ عَافِنِي فِي سَمْعِي اللَّهُمَّ عَافِنِي فِي بَصَرِي لاَ إِلَهَ إِلاَّ أَنْتَ تُعِيدُهَا ثَلاَثًا حِينَ تُصْبِحُ وَثَلاَثًا …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Hasan Isnaad"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Daif"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-morning-fitrah": {
+   "refs": [
+    {
+     "kind": "other",
+     "raw": "মুসনাদে আহমাদ: 15360",
+     "book_bn": "মুসনাদে আহমাদ",
+     "book_en": "Musnad Ahmad",
+     "number": 15360,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    },
+    {
+     "kind": "other",
+     "raw": "সুনানে নাসায়ী কুবরা: 9837",
+     "book_bn": "সুনানে নাসায়ী কুবরা",
+     "book_en": "Sunan al-Kubra (Nasai)",
+     "number": 9837,
+     "check": {
+      "status": "unchecked",
+      "score": 0,
+      "reason": "এই কিতাবের জন্য স্বয়ংক্রিয় তুলনার ডেটাসেট নেই — সরাসরি মূল কিতাবে দেখুন"
+     }
+    }
+   ],
+   "overall": "unchecked"
+  },
+  "dua-istighfar-100-majlis": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1516",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1516,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… فِي الْمَجْلِسِ الْوَاحِدِ مِائَةَ مَرَّةٍ رَبِّ اغْفِرْ لِي وَتُبْ عَلَىَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3434",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3434,
+     "check": {
+      "status": "partial",
+      "score": 0.89,
+      "excerpt": "… مَرَّةٍ مِنْ قَبْلِ أَنْ يَقُومَ رَبِّ اغْفِرْ لِي وَتُبْ عَلَىَّ إِنَّكَ أَنْتَ التَّوَّابُ الْغَفُورُ حَدَّثَنَا ابْنُ أَبِي عُمَرَ، …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Bashar Awad Maarouf",
+        "grade": "Hasan Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Sahih"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-alhamdulillah-full": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 223",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 223,
+     "check": {
+      "status": "match",
+      "score": 0.94,
+      "excerpt": "… اللَّهِ صلى الله عليه وسلم الطُّهُورُ شَطْرُ الإِيمَانِ وَالْحَمْدُ لِلَّهِ تَمْلأُ الْمِيزَانَ وَسُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ تَمْلآنِ أَوْ تَمْلأُ مَا بَيْنَ السَّمَوَاتِ وَالأَرْضِ وَالصَّلاَةُ نُورٌ وَالصَّدَقَةُ بُرْهَانٌ وَالصَّبْرُ …"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "durood-subhanallahi-adada": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 2726",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 2726,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… بِمَا قُلْتِ مُنْذُ الْيَوْمِ لَوَزَنَتْهُنَّ سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ"
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-forgiveness-parents-hasan": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সুনানে আবু দাউদ: 1517",
+     "book_key": "abudawud",
+     "book_bn": "সুনানে আবু দাউদ",
+     "book_en": "Sunan Abi Dawud",
+     "number": 1517,
+     "check": {
+      "status": "match",
+      "score": 0.92,
+      "excerpt": "… عليه وسلم يَقُولُ مَنْ قَالَ أَسْتَغْفِرُ اللَّهَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَىُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ غُفِرَ لَهُ وَإِنْ كَانَ فَرَّ …",
+      "grades": [
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Muhammad Muhyi Al-Din Abdul Hamid",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Shuaib Al Arnaut",
+        "grade": "Sahih Lighairihi"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "জামে তিরমিযী: 3577",
+     "book_key": "tirmidhi",
+     "book_bn": "জামে তিরমিযী",
+     "book_en": "Jami' at-Tirmidhi",
+     "number": 3577,
+     "check": {
+      "status": "match",
+      "score": 1.0,
+      "excerpt": "… عليه وسلم يَقُولُ مَنْ قَالَ أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لاَ إِلَهَ إِلاَّ هُوَ الْحَىَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ غُفِرَ لَهُ وَإِنْ كَانَ فَرَّ …",
+      "grades": [
+       {
+        "name": "Ahmad Muhammad Shakir",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Al-Albani",
+        "grade": "Sahih"
+       },
+       {
+        "name": "Zubair Ali Zai",
+        "grade": "Hasan"
+       }
+      ]
+     }
+    }
+   ],
+   "overall": "match"
+  },
+  "dua-qaza-ramadan-layl": {
+   "refs": [
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 134",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 134,
+     "check": {
+      "status": "partial",
+      "score": 0.67,
+      "excerpt": "… وَجَدَ مِنْ ذَلِكَ شَيْئًا فَلْيَقُلْ آمَنْتُ بِاللَّهِ",
+      "weak": true
+     }
+    },
+    {
+     "kind": "hadith",
+     "raw": "সহীহ মুসলিম: 135",
+     "book_key": "muslim",
+     "book_bn": "সহীহ মুসলিম",
+     "book_en": "Sahih Muslim",
+     "number": 135,
+     "check": {
+      "status": "mismatch",
+      "score": 0.0,
+      "excerpt": "حَدَّثَنِي عَبْدُ الْوَارِثِ بْنُ عَبْدِ …",
+      "weak": true
+     }
+    }
+   ],
+   "overall": "partial"
+  }
+ }
+}

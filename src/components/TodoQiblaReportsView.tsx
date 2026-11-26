@@ -1,3 +1,4 @@
+import { savePngDataUrl } from '../lib/saveFile';
 import React, { useMemo, useRef, useState } from 'react';
 import { getLocalDateKey } from '../lib/date';
 import {
@@ -169,7 +170,7 @@ export default function TodoQiblaReportsView({
     };
   }, [period, prayers, sadaqahList, todos]);
 
-  const downloadReportPng = () => {
+  const downloadReportPng = async () => {
     const canvas = reportCanvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -216,10 +217,14 @@ export default function TodoQiblaReportsView({
       ctx.fillText(val, x + 20, y + 64);
     });
 
-    const a = document.createElement('a');
-    a.href = canvas.toDataURL('image/png');
-    a.download = `taskeen-report-${period}.png`;
-    a.click();
+    const res = await savePngDataUrl(`taskeen-report-${period}.png`, canvas.toDataURL('image/png')).catch((e) => {
+      onNotify(String(e));
+      return 'error' as const;
+    });
+    if (res !== 'saved') {
+      if (res === 'cancelled') onNotify('সংরক্ষণ বাতিল করা হয়েছে');
+      return;
+    }
     onNotify('রিপোর্ট PNG ডাউনলোড হয়েছে');
   };
 

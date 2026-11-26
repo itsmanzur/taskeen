@@ -23,3 +23,7 @@ desktop.ini
 # Editor directories
 .vscode/
 .idea/
+
+# Generated caches
+__pycache__/
+.ref-cache/

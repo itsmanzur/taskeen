@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { invoke } from '@tauri-apps/api/core';
+import { getCryptoStatus } from '../lib/secureStorage';
 import { BookOpen, Check, Copy, ExternalLink, HeartHandshake, Info, MessageSquareHeart, ShieldCheck, Sparkles, User } from 'lucide-react';
 
 interface AboutViewProps {
   nativeDbHash: string;
+  dbVerified?: boolean | null;
   onOpenFeedbackModal: () => void;
 }
 
-export default function AboutView({ nativeDbHash, onOpenFeedbackModal }: AboutViewProps) {
+export default function AboutView({ nativeDbHash, dbVerified, onOpenFeedbackModal }: AboutViewProps) {
   const [copiedNum, setCopiedNum] = useState(false);
 
   const donateNumber = '01930478957';
@@ -83,9 +85,16 @@ export default function AboutView({ nativeDbHash, onOpenFeedbackModal }: AboutVi
           <p className="text-xs ts-muted-text leading-relaxed">
             কোনো ট্র্যাকিং বা বিজ্ঞাপন নেই। সব তথ্য আপনার ডিভাইসেই থাকে; সাথে রয়েছে Argon2 পিন লক এবং AES-256-GCM এনক্রিপ্টেড ব্যাকআপ।
           </p>
+          <div className="text-[11px] font-mono-code ts-accent-text pt-1">
+            {getCryptoStatus().enabled
+              ? '✓ ব্যক্তিগত ডেটা এনক্রিপ্টেড (AES-256-GCM, OS কীচেইন)'
+              : `⚠ ডেটা এনক্রিপশন বন্ধ${getCryptoStatus().error ? ` — ${getCryptoStatus().error}` : ''}`}
+          </div>
           {nativeDbHash && (
             <div className="text-[11px] font-mono-code ts-accent-text pt-1">
-              DB SHA-256: {nativeDbHash.slice(0, 14)}...
+              DB SHA-256: {nativeDbHash.slice(0, 14)}...{' '}
+              {dbVerified === true && '✓ বিল্ড-হ্যাশের সাথে মিলেছে'}
+              {dbVerified === false && '⚠ বিল্ড-হ্যাশের সাথে মেলেনি'}
             </div>
           )}
         </div>

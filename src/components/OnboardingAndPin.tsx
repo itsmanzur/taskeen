@@ -85,16 +85,35 @@ export function OnboardingWizard({ onComplete }: OnboardingProps) {
   );
 }
 
+const PIN_LOCK_KEY = 'taskeen_pin_lock_v1';
+
+function readPinLock(): { attempts: number; lockUntil: number } {
+  try {
+    const raw = JSON.parse(localStorage.getItem(PIN_LOCK_KEY) || '{}');
+    return { attempts: Number(raw.attempts) || 0, lockUntil: Number(raw.lockUntil) || 0 };
+  } catch {
+    return { attempts: 0, lockUntil: 0 };
+  }
+}
+
+function writePinLock(attempts: number, lockUntil: number) {
+  try {
+    if (attempts === 0 && lockUntil === 0) localStorage.removeItem(PIN_LOCK_KEY);
+    else localStorage.setItem(PIN_LOCK_KEY, JSON.stringify({ attempts, lockUntil }));
+  } catch {}
+}
+
 interface PinLockScreenProps {
   expectedPin: string;
-  onUnlock: () => void;
+  /** upgradedHash is provided when a legacy plain-text PIN was verified and re-hashed. */
+  onUnlock: (upgradedHash?: string) => void;
 }
 
 export function PinLockScreen({ expectedPin, onUnlock }: PinLockScreenProps) {
   const [input, setInput] = useState('');
   const [err, setErr] = useState('');
-  const [attempts, setAttempts] = useState(0);
-  const [lockUntil, setLockUntil] = useState<number>(0);
+  const [attempts, setAttempts] = useState<number>(() => readPinLock().attempts);
+  const [lockUntil, setLockUntil] = useState<number>(() => readPinLock().lockUntil);
   const [nowSec, setNowSec] = useState<number>(() => Math.floor(Date.now() / 1000));
 
   useEffect(() => {
@@ -123,17 +142,28 @@ export function PinLockScreen({ expectedPin, onUnlock }: PinLockScreenProps) {
     if (ok) {
       setErr('');
       setAttempts(0);
-      onUnlock();
+      writePinLock(0, 0);
+      let upgraded: string | undefined;
+      if (!expectedPin.startsWith('$argon2')) {
+        try {
+          upgraded = await invoke<string>('hash_app_pin', { pin: input });
+        } catch {
+          upgraded = undefined;
+        }
+      }
+      onUnlock(upgraded);
     } else {
       const nextAttempts = attempts + 1;
       setAttempts(nextAttempts);
       if (nextAttempts >= 5) {
         const waitSecs = Math.min(300, 30 * Math.pow(2, nextAttempts - 5));
         const until = Math.floor(Date.now() / 1000) + waitSecs;
+        writePinLock(nextAttempts, until);
         setLockUntil(until);
         setNowSec(Math.floor(Date.now() / 1000));
         setErr(`অনেকবার ভুল পিন! ${waitSecs} সেকেন্ড অপেক্ষা করুন।`);
       } else {
+        writePinLock(nextAttempts, 0);
         setErr(`ভুল পিন! আবার চেষ্টা করুন (${nextAttempts}/5)।`);
       }
       setInput('');
@@ -183,6 +213,7 @@ interface PinModalProps {
 export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) {
   const [pin, setPin] = useState('');
   const [busy, setBusy] = useState(false);
+  const [saveErr, setSaveErr] = useState('');
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
@@ -194,7 +225,7 @@ export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) 
           <button onClick={onClose}>✕</button>
         </div>
         <p className="opacity-75">
-          আপনার ব্যক্তিগত মুহাসাবাহ ও ওসিয়তনামা সুরক্ষিত রাখতে ৪–৬ ডিজিটের পিন সেট করুন (Argon2 দ্বারা সুরক্ষিত)।
+          অ্যাপ খোলার সময় পিন চাওয়া হবে (পিন Argon2 দিয়ে হ্যাশ করা থাকে)। এটি স্ক্রিন-লক; ডিভাইসের ডেটা ফাইল এনক্রিপ্ট করে না।
         </p>
         <input
           type="password"
@@ -205,6 +236,7 @@ export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) 
           placeholder="নতুন ৪–৬ ডিজিটের পিন (শুধু সংখ্যা)"
           className="w-full px-3 py-2 rounded-xl border border-[#D2DDD8] font-mono-code"
         />
+        {saveErr && <p className="text-red-600">{saveErr}</p>}
         <div className="flex gap-2">
           {hasPin && (
             <button
@@ -225,11 +257,11 @@ export function PinSettingsModal({ hasPin, onSavePin, onClose }: PinModalProps) 
               try {
                 const hashed = await invoke<string>('hash_app_pin', { pin });
                 onSavePin(hashed);
+                onClose();
               } catch {
-                onSavePin(pin);
+                setSaveErr('পিন সুরক্ষিতভাবে সেভ করা যায়নি। ডেস্কটপ অ্যাপে আবার চেষ্টা করুন।');
               } finally {
                 setBusy(false);
-                onClose();
               }
             }}
             className="flex-1 py-2 rounded-xl bg-[#0E5A45] text-white font-semibold disabled:opacity-50"
